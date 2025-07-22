@@ -116,7 +116,22 @@ function searchMaps(query) {
   });
 }
 
+// Build Own Map functionality
+function buildOwnMap() {
+  // For now, show an alert with information about building custom maps
+  alert(
+    "🚀 Build Your Own Map Feature Coming Soon!\n\nThis feature will allow you to:\n• Upload your own data\n• Create custom visualizations\n• Share your maps with the community\n\nStay tuned for updates!"
+  );
+
+  // Future implementation could include:
+  // - Modal with map builder interface
+  // - Data upload functionality
+  // - Custom visualization options
+  // - Map sharing capabilities
+}
+
 // Export functions for global access
 window.openSidebar = openSidebar;
 window.closeSidebar = closeSidebar;
 window.searchMaps = searchMaps;
+window.buildOwnMap = buildOwnMap;

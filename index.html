@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas Interface Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/globals.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <style>
+      /* Category filtering - simple approach */
+      .map-card {
+        display: block;
+      }
+
+      /* When a specific category is selected, hide others */
+      .container:has(#marine-ecology:checked)
+        .map-card:not([data-category="marine-ecology"]) {
+        display: none;
+      }
+
+      .container:has(#fisheries:checked)
+        .map-card:not([data-category="fisheries"]) {
+        display: none;
+      }
+
+      .container:has(#conservation:checked)
+        .map-card:not([data-category="conservation"]) {
+        display: none;
+      }
+
+      .container:has(#research:checked)
+        .map-card:not([data-category="research"]) {
+        display: none;
+      }
+
+      .container:has(#pollution:checked)
+        .map-card:not([data-category="pollution"]) {
+        display: none;
+      }
+
+      /* Show all maps when "All Maps" is selected */
+      .container:has(#all:checked) .map-card {
+        display: block;
+      }
+
+      /* Category label hover effect */
+      .category-label:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      /* Category label hover effect */
+      .category-label:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      /* Selected category styling */
+      input[type="radio"]:checked + .category-label {
+        background-color: #007bff;
+        color: white;
+      }
+
+      /* Modal styles */
+      .map-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .map-modal:target {
+        display: block;
+      }
+
+      .modal-content {
+        background-color: white;
+        margin: 5% auto;
+        padding: 0;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+
+      .modal-header {
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .close-modal {
+        font-size: 24px;
+        font-weight: bold;
+        color: #999;
+        text-decoration: none;
+      }
+
+      .close-modal:hover {
+        color: #000;
+      }
+
+      .modal-body {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-info">
+      🗺️ ArcGIS Atlas Interface Clone - Interactive Demo
+    </div>
+
+    <div class="container">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 class="modal-title">Medtrix Atlas Explorer</h2>
+        </div>
+
+        <div class="modal-body">
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <div class="sidebar-header">
+              <h3>Categories</h3>
+            </div>
+            <nav class="category-nav">
+              <div class="category-group">
+                <input type="radio" name="category" id="all" checked />
+                <label for="all" class="category-label">
+                  <span class="category-icon">🗺️</span>
+                  All Maps
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input type="radio" name="category" id="marine-ecology" />
+                <label for="marine-ecology" class="category-label">
+                  <span class="category-icon">🌊</span>
+                  Marine Ecology
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input type="radio" name="category" id="fisheries-regulation" />
+                <label for="fisheries-regulation" class="category-label">
+                  <span class="category-icon">🎣</span>
+                  Fisheries & Regulation
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input
+                  type="radio"
+                  name="category"
+                  id="conservation-management"
+                />
+                <label for="conservation-management" class="category-label">
+                  <span class="category-icon">🔄</span>
+                  Conservation & Management
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input type="radio" name="category" id="monitoring-research" />
+                <label for="monitoring-research" class="category-label">
+                  <span class="category-icon">🔬</span>
+                  Monitoring & Research
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input type="radio" name="category" id="tools-management" />
+                <label for="tools-management" class="category-label">
+                  <span class="category-icon">🛠️</span>
+                  Tools & Management
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input
+                  type="radio"
+                  name="category"
+                  id="conservation-projects"
+                />
+                <label for="conservation-projects" class="category-label">
+                  <span class="category-icon">🌿</span>
+                  Conservation Projects
+                </label>
+              </div>
+            </nav>
+          </aside>
+
+          <!-- Main Content Area -->
+          <main class="main-content">
+            <div class="content-header">
+              <h3>Medtrix Maps</h3>
+              <p>
+                Real Mediterranean marine monitoring data from the Medtrix
+                platform. Click on any map to view detailed information.
+              </p>
+            </div>
+
+            <div class="maps-grid">
+              <!-- Marine Ecology Maps -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🌊</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('IMPACT : Réseau de suivi des pressions anthropiques côtières en Méditerranée française', 'IMPACT est le réseau de suivi des pressions anthropiques côtières en Méditerranée française, opéré par Andromède océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse. Les activités humaines induisent des pressions importantes sur le milieu marin, et en particulier sur les écosystèmes côtiers.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      IMPACT : Réseau de suivi des pressions anthropiques
+                      côtières
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('IMPACT : Réseau de suivi des pressions anthropiques côtières en Méditerranée française', 'IMPACT est le réseau de suivi des pressions anthropiques côtières en Méditerranée française, opéré par Andromède océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse. Les activités humaines induisent des pressions importantes sur le milieu marin, et en particulier sur les écosystèmes côtiers. Outils disponibles : Au-delà de la localisation géographique des différentes actions de restauration (par projet), vous avez accès à des illustrations, cartes de localisation des actions, modèles 3D, plaquettes descriptives et rapports scientifiques.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🪸</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('RECOR : Suivi des assemblages coralligènes en Méditerranée française', 'Le réseau de surveillance RECOR, initié en 2010, concerne le suivi des assemblages coralligènes. Il est opéré par Andromède Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      RECOR : Suivi des assemblages coralligènes en Méditerranée
+                      française
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('RECOR : Suivi des assemblages coralligènes en Méditerranée française', 'Le réseau de surveillance RECOR, initié en 2010, concerne le suivi des assemblages coralligènes. Il est opéré par Andromède Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse. Outils disponibles : En cliquant sur les différents sites RECOR, l\'utilisateur accède à une fenêtre POP UP avec les caractéristiques du site et les résultats d\'analyses.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🌿</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('TEMPO : Suivi des herbiers à Posidonie en Méditerranée française', 'TEMPO est le réseau de suivi des herbiers de Posidonie sur deux secteurs caractéristiques de cet écosystème clé de Méditerranée : la limite inférieure et la profondeur intermédiaire (-15 mètres).')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      TEMPO : Suivi des herbiers à Posidonie en Méditerranée
+                      française
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('TEMPO : Suivi des herbiers à Posidonie en Méditerranée française', 'TEMPO est le réseau de suivi des herbiers de Posidonie sur deux secteurs caractéristiques de cet écosystème clé de Méditerranée : la limite inférieure et la profondeur intermédiaire (-15 mètres). Outils disponibles : En cliquant sur les différents sites TEMPO, l\'utilisateur accède à une fenêtre POP UP avec les caractéristiques du site et les résultats d\'analyses.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fisheries & Regulation Maps -->
+              <div class="map-card" data-category="fisheries">
+                <div class="map-preview">
+                  <div class="map-image">🎣</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('Portail Halieutique Méditerranéen - Réglementation de la pêche', 'Le portail halieutique méditerranéen présente les réglementations de pêche en vigueur dans les eaux méditerranéennes françaises.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      Portail Halieutique Méditerranéen - Réglementation de la
+                      pêche
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('Portail Halieutique Méditerranéen - Réglementation de la pêche', 'Le portail halieutique méditerranéen présente les réglementations de pêche en vigueur dans les eaux méditerranéennes françaises. Outils disponibles : Consultation des réglementations de pêche par zone et par espèce.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Office français de la biodiversité
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Mise à jour régulière</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Conservation & Management Maps -->
+              <div class="map-card" data-category="conservation">
+                <div class="map-preview">
+                  <div class="map-image">🔄</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('RESTAU-MED : Restauration écologique en zone côtière Méditerranéenne', 'La mise en œuvre des politiques de gestion de l\'espace littoral et marin s\'appuie sur trois axes : la lutte contre la pollution, la non-dégradation des habitats côtiers et la restauration écologique.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      RESTAU-MED : Restauration écologique en zone côtière
+                      Méditerranéenne
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('RESTAU-MED : Restauration écologique en zone côtière Méditerranéenne', 'La mise en œuvre des politiques de gestion de l\'espace littoral et marin s\'appuie sur trois axes : la lutte contre la pollution, la non-dégradation des habitats côtiers et la restauration écologique. Outils disponibles : Au-delà de la localisation géographique des différentes actions de restauration (par projet), vous avez accès à des illustrations, cartes de localisation des actions, modèles 3D, plaquettes descriptives et rapports scientifiques.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie, Agence de l'eau Rhône
+                    Méditerranée Corse
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Variable</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="map-card" data-category="conservation">
+                <div class="map-preview">
+                  <div class="map-image">🏝️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('Initiative PIM : Petites Iles de Méditerranée', 'L\'Initiative PIM vise à préserver la biodiversité des petites îles de Méditerranée à travers des actions de conservation et de gestion durable.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      Initiative PIM : Petites Iles de Méditerranée
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('Initiative PIM : Petites Iles de Méditerranée', 'L\'Initiative PIM vise à préserver la biodiversité des petites îles de Méditerranée à travers des actions de conservation et de gestion durable. Outils disponibles : Cartographie des îles, actions de conservation, et suivi de la biodiversité.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Conservatoire du littoral
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Research & Expeditions Maps -->
+              <div class="map-card" data-category="research">
+                <div class="map-preview">
+                  <div class="map-image">🔬</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('Atlas de synthèse - Surveillance biologique et Qualité des eaux de Méditerranée', 'Pour mieux appréhender l\'ensemble des informations acquises dans les dispositifs de surveillance (RECOR, TEMPO, PISCIS, CALME, SURFSTAT et IMPACT), un premier travail de compilation et de synthèse de ces données a été publié dans un atlas cartographique de surveillance biologique.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      Atlas de synthèse - Surveillance biologique et Qualité des
+                      eaux de Méditerranée
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('Atlas de synthèse - Surveillance biologique et Qualité des eaux de Méditerranée', 'Pour mieux appréhender l\'ensemble des informations acquises dans les dispositifs de surveillance (RECOR, TEMPO, PISCIS, CALME, SURFSTAT et IMPACT), un premier travail de compilation et de synthèse de ces données a été publié dans un atlas cartographique de surveillance biologique. Outils disponibles : Une carte des stations/sites de surveillance des herbiers à Posidonie et du coralligène est disponible dans le projet.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologique - Agence de l'eau Rhône
+                    Méditerranée et Corse
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="map-card" data-category="research">
+                <div class="map-preview">
+                  <div class="map-image">🚢</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('Expéditions scientifiques - Présentation des résultats des différentes expéditions', 'GOMBESSA 5: En juillet 2019, quatre plongeurs ont vécu confinés dans une station pressurisée pour étudier la zone crépusculaire méditerranéenne entre Marseille et Monaco. GOMBESSA 6: Durant l\'été 2021, l\'expédition scientifique Gombessa 6 a été menée sur des structures coralligènes régulières appelées « anneaux coralligènes ».')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      Expéditions scientifiques - Présentation des résultats des
+                      différentes expéditions
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('Expéditions scientifiques - Présentation des résultats des différentes expéditions', 'GOMBESSA 5: En juillet 2019, quatre plongeurs ont vécu confinés dans une station pressurisée pour étudier la zone crépusculaire méditerranéenne entre Marseille et Monaco. GOMBESSA 6: Durant l\'été 2021, l\'expédition scientifique Gombessa 6 a été menée sur des structures coralligènes régulières appelées « anneaux coralligènes ». Outils disponibles : En cliquant sur les différents sites explorés, l\'utilisateur peut accéder aux caractéristiques du site, visualiser les différents protocoles réalisés et télécharger les fiches résultats.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie (+ partenaires scientifiques)
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les trois ans</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pollution & Monitoring Maps -->
+              <div class="map-card" data-category="pollution">
+                <div class="map-preview">
+                  <div class="map-image">🚨</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('CHIMIE-Med : Caractérisation de la pollution des eaux côtières en Méditerranée française', 'L\'Agence a développé depuis 1996 une politique ambitieuse de caractérisation et de surveillance des eaux côtières. Les nombreux partenariats, dont ceux engagés avec Ifremer, ont permis de mettre en place des réseaux de surveillance de la contamination chimique, couvrant la totalité de la façade méditerranéenne.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      CHIMIE-Med : Caractérisation de la pollution des eaux
+                      côtières en Méditerranée française
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('CHIMIE-Med : Caractérisation de la pollution des eaux côtières en Méditerranée française', 'L\'Agence a développé depuis 1996 une politique ambitieuse de caractérisation et de surveillance des eaux côtières. Les nombreux partenariats, dont ceux engagés avec Ifremer, ont permis de mettre en place des réseaux de surveillance de la contamination chimique, couvrant la totalité de la façade méditerranéenne. Outils disponibles : Consultation des données de contamination chimique par réseau et par paramètre.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Ifremer, Institut de Radioprotection et de Sûreté
+                    Nucléaire, WWF
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Variable</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="map-card" data-category="pollution">
+                <div class="map-preview">
+                  <div class="map-image">🐋</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('CETAMED : Surveillance chimique de la chaîne trophique basée sur les échouages de mammifères marins', 'Depuis de nombreuses années, les cétacés s\'échouent régulièrement sur nos côtes. De nombreux polluants prioritaires, tels que les polychlorobiphényles (PCB), pesticides, hydrocarbures aromatiques polycycliques (HAP), métaux…, de par leurs teneurs, sont largement suspectés de contribuer à ces échouages.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      CETAMED : Surveillance chimique de la chaîne trophique
+                      basée sur les échouages de mammifères marins
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('CETAMED : Surveillance chimique de la chaîne trophique basée sur les échouages de mammifères marins', 'Depuis de nombreuses années, les cétacés s\'échouent régulièrement sur nos côtes. De nombreux polluants prioritaires, tels que les polychlorobiphényles (PCB), pesticides, hydrocarbures aromatiques polycycliques (HAP), métaux…, de par leurs teneurs, sont largement suspectés de contribuer à ces échouages. Outils disponibles : En cliquant sur les différents sites d\'échouage, l\'utilisateur accède à une fenêtre POP UP avec les caractéristiques de l\'animal échoué, les résultats d\'analyses des contaminants et les informations sur les causes d\'échouage.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Dr Frank Dhermain, GECEM
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les trois ans</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additional Maps from medtrix-maps-data.js -->
+
+              <!-- CALME Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🔊</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('CALME : Caractérisation Acoustique du Littoral Méditerranéen et de ses Ecosystèmes', 'En appliquant les méthodes de l\'écologie acoustique, CALME est le réseau de surveillance environnementale par acoustique passive de la sous-région marine \'Méditerranée Occidentale\', créé en 2015 par CHORUS en partenariat avec l\'Agence de l\'Eau RMC.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      CALME : Caractérisation Acoustique du Littoral
+                      Méditerranéen
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('CALME : Caractérisation Acoustique du Littoral Méditerranéen et de ses Ecosystèmes', 'En appliquant les méthodes de l\'écologie acoustique, CALME est le réseau de surveillance environnementale par acoustique passive de la sous-région marine \'Méditerranée Occidentale\', créé en 2015 par CHORUS en partenariat avec l\'Agence de l\'Eau RMC. Outils disponibles : En cliquant sur les différents sites CALME (points bleus), l\'utilisateur accède à une fenêtre POP UP avec les caractéristiques du site, les indicateurs acoustiques calculés et les graphiques temporels des niveaux sonores, ainsi que les informations sur la biodiversité acoustique détectée.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: CHORUS Fondation Grenoble INP et Alseamar
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Variable</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CALOR Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🌡️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('CALOR : Suivi de la température en Méditerranée française', 'Depuis 2013, Andromède Océanologie, avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse, équipe les sites de surveillance du coralligène (réseau RECOR) et des herbiers à Posidonie (réseau TEMPO) avec des capteurs de température HOBO Water Temp Pro v2.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      CALOR : Suivi de la température en Méditerranée française
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('CALOR : Suivi de la température en Méditerranée française', 'Depuis 2013, Andromède Océanologie, avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse, équipe les sites de surveillance du coralligène (réseau RECOR) et des herbiers à Posidonie (réseau TEMPO) avec des capteurs de température HOBO Water Temp Pro v2. Outils disponibles : En cliquant sur les différents sites CALOR (points rouges), l\'utilisateur accède à une fenêtre POP UP avec les caractéristiques du site, les graphiques temporels des températures et les statistiques climatiques calculées.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FILAM'ED Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🦠</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('FILAM\'MED : Suivi des algues filamenteuses en Méditerranée française', 'Le réseau « Filam\'med » met à disposition des usagers de la plateforme Medtrix l\'ensemble des observations d\'algues filamenteuses réalisées par Andromède océanologie et ses partenaires.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      FILAM'MED : Suivi des algues filamenteuses en Méditerranée
+                      française
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('FILAM\'MED : Suivi des algues filamenteuses en Méditerranée française', 'Le réseau « Filam\'med » met à disposition des usagers de la plateforme Medtrix l\'ensemble des observations d\'algues filamenteuses réalisées par Andromède océanologie et ses partenaires. Outils disponibles : L\'utilisateur a la possibilité de visualiser les observations d\'algues filamenteuses réalisées lors des campagnes réseaux de surveillance (RECOR et TEMPO), des campagnes de plongées tractées (vérités terrain) et expéditions scientifiques.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie, BioObs
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PISCIS Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🐟</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('PISCIS : Suivi ichtyologique des herbiers à Posidonie en Méditerranée française', 'Le réseau PISCIS, initié en 2010, concerne le suivi ichtyologique des herbiers à Posidonie. Il est opéré par Andromède Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      PISCIS : Suivi ichtyologique des herbiers à Posidonie
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('PISCIS : Suivi ichtyologique des herbiers à Posidonie en Méditerranée française', 'Le réseau PISCIS, initié en 2010, concerne le suivi ichtyologique des herbiers à Posidonie. Il est opéré par Andromède Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse. Outils disponibles : En cliquant sur les différents sites PISCIS, l\'utilisateur accède à une fenêtre POP UP avec les caractéristiques du site et les résultats d\'analyses.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- DONIA Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🗺️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('DONIA : Cartographie des habitats marins côtiers en Méditerranée française', 'DONIA est un projet de cartographie des habitats marins côtiers en Méditerranée française, développé par Andromède Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      DONIA : Cartographie des habitats marins côtiers
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('DONIA : Cartographie des habitats marins côtiers en Méditerranée française', 'DONIA est un projet de cartographie des habitats marins côtiers en Méditerranée française, développé par Andromède Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse. Outils disponibles : En cliquant sur les différents sites DONIA, l\'utilisateur accède à une fenêtre POP UP avec les caractéristiques du site et les résultats d\'analyses.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Variable</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SURFSTAT Map -->
+              <div class="map-card" data-category="pollution">
+                <div class="map-preview">
+                  <div class="map-image">🏞️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('SURFSTAT : État des habitats marins côtiers en Méditerranée française', 'SURFSTAT est un réseau de surveillance de l\'état des habitats marins côtiers en Méditerranée française, opéré par Andromède Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      SURFSTAT : État des habitats marins côtiers
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('SURFSTAT : État des habitats marins côtiers en Méditerranée française', 'SURFSTAT est un réseau de surveillance de l\'état des habitats marins côtiers en Méditerranée française, opéré par Andromède Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse. Outils disponibles : En cliquant sur les différents sites SURFSTAT, l\'utilisateur accède à une fenêtre POP UP avec les caractéristiques du site et les résultats d\'analyses.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Variable</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MODEL Map -->
+              <div class="map-card" data-category="research">
+                <div class="map-preview">
+                  <div class="map-image">📐</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('MODEL : Modélisation 3D des habitats marins en Méditerranée française', 'La photogrammétrie permet, à partir de l\'assemblage de nombreuses photographies (2D) prises sous différents angles, de reconstituer un objet en trois dimensions (3D).')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      MODEL : Modélisation 3D des habitats marins
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('MODEL : Modélisation 3D des habitats marins en Méditerranée française', 'La photogrammétrie permet, à partir de l\'assemblage de nombreuses photographies (2D) prises sous différents angles, de reconstituer un objet en trois dimensions (3D). Outils disponibles : En cliquant sur les différents icônes \'herbier\', \'coralligène\', \'épave\' ou \'récifs artificiels\', vous pouvez afficher le modèle 3D du site dans la fenêtre qui s\'ouvre à gauche de la carte.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- RESPIRE Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🐡</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('RESPIRE : Surveillance du recrutement larvaire en Méditerranée française', 'S\'appuyant sur la Directive Cadre européenne « Stratégie pour le milieu marin » (DCSMM), et sa volonté d\'atteindre le « bon état écologique » de l\'ensemble des eaux marines, l\'Agence de l\'Eau Rhône Méditerranée Corse (AERMC) a initié, en collaboration avec ECOCEAN, le réseau de surveillance RESPIRE.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      RESPIRE : Surveillance du recrutement larvaire
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('RESPIRE : Surveillance du recrutement larvaire en Méditerranée française', 'S\'appuyant sur la Directive Cadre européenne « Stratégie pour le milieu marin » (DCSMM), et sa volonté d\'atteindre le « bon état écologique » de l\'ensemble des eaux marines, l\'Agence de l\'Eau Rhône Méditerranée Corse (AERMC) a initié, en collaboration avec ECOCEAN, le réseau de surveillance RESPIRE. Outils disponibles : En cliquant sur les différents sites RESPIRE (points bleus), l\'utilisateur accède à une fenêtre POP UP avec les caractéristiques du site, les résultats des comptages de post-larves et les informations sur la typologie du site.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">Sources: ECOCEAN</div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les trois ans</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARLIT Map -->
+              <div class="map-card" data-category="pollution">
+                <div class="map-preview">
+                  <div class="map-image">📊</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('CARLIT : Évaluation de l\'état écologique du littoral rocheux méditerranéen français', 'Le réseau CARLIT est opéré par l\'Institut Méditerranéen d\'Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      CARLIT : Évaluation de l'état écologique du littoral
+                      rocheux
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('CARLIT : Évaluation de l\'état écologique du littoral rocheux méditerranéen français', 'Le réseau CARLIT est opéré par l\'Institut Méditerranéen d\'Océanologie avec le soutien de l\'Agence de l\'eau Rhône Méditerranée et Corse. Outils disponibles : Une fois que vous avez coché la couche \'Etat écologique\' souhaitée, en cliquant sur chaque masse d\'eau côtière, une fenêtre POP UP s\'affiche à gauche de la carte.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Institut Méditerranéen d'Océanologie (MIO)
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les trois ans</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LAGMED Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🏞️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('LAGMED : Suivi de la qualité des eaux lagunaires en Méditerranée française', 'Les lagunes sont des milieux riches mais fragiles, au fonctionnement complexe et particulièrement exposés aux pressions physiques et aux pollutions compte tenu de la forte anthropisation de leurs bassins versants.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      LAGMED : Suivi de la qualité des eaux lagunaires
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('LAGMED : Suivi de la qualité des eaux lagunaires en Méditerranée française', 'Les lagunes sont des milieux riches mais fragiles, au fonctionnement complexe et particulièrement exposés aux pressions physiques et aux pollutions compte tenu de la forte anthropisation de leurs bassins versants. Outils disponibles : Des cartes de l\'état chimique, de l\'état écologique et de l\'état général, ainsi que des descripteurs chimiques et écologiques des masses d\'eau sont visibles pour les années 2006 à 2018.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Ifremer, Tour du Valat, l'AERMC
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated"
+                      >Freq: Tous les trois ans au titre de la DCE</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- LITTOMED Map -->
+              <div class="map-card" data-category="pollution">
+                <div class="map-preview">
+                  <div class="map-image">🌊</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('LITTOMED : Suivi de la qualité des eaux côtières en Méditerranée française', 'La mise en œuvre des réseaux de surveillance de la Directive Cadre Eau a permis d\'acquérir de nombreuses données sur la biologie et la chimie.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      LITTOMED : Suivi de la qualité des eaux côtières
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('LITTOMED : Suivi de la qualité des eaux côtières en Méditerranée française', 'La mise en œuvre des réseaux de surveillance de la Directive Cadre Eau a permis d\'acquérir de nombreuses données sur la biologie et la chimie. Outils disponibles : Des cartes de l\'état chimique, de l\'état écologique et de l\'état général, ainsi que des descripteurs écologiques des masses d\'eau sont visibles pour les années 2006 à 2018.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Agence de l'eau Rhône Méditerranée et Corse,
+                    IFREMER, Andromède Océanologie, STARESO
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated"
+                      >Freq: Tous les trois ans au titre de la DCE</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- STARECAPMED Map -->
+              <div class="map-card" data-category="research">
+                <div class="map-preview">
+                  <div class="map-image">🔬</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('STARECAPMED : STAtion of Reference and rEsearch on Change of local and global Anthropogenic Pressures on Mediterranean Ecosytems Drifs', 'Le projet STARECAPMED a pour objectif principal de faire de la baie de Calvi un site atelier de référence en Méditerranée et de permettre l\'étude des liens entre l\'état des écosystèmes marins et l\'influence des pressions humaines.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      STARECAPMED : Station de référence et recherche
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('STARECAPMED : STAtion of Reference and rEsearch on Change of local and global Anthropogenic Pressures on Mediterranean Ecosytems Drifs', 'Le projet STARECAPMED a pour objectif principal de faire de la baie de Calvi un site atelier de référence en Méditerranée et de permettre l\'étude des liens entre l\'état des écosystèmes marins et l\'influence des pressions humaines. Outils disponibles : L\'utilisateur peut visualiser les données concernant le recrutement des langoustes rouges, les paramètres physico-chimiques et biologiques de la colonne d\'eau et les différents indices de qualification écologique mesurés.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">Sources: STARESO</div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sciences participatives Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">👥</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('Projet \'Sciences participatives\'', 'La meilleure compréhension des mécanismes complexes de fonctionnement des écosystèmes marins nécessite la collecte et l\'analyse d\'une quantité importante de données.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      Sciences participatives
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('Projet \'Sciences participatives\'', 'La meilleure compréhension des mécanismes complexes de fonctionnement des écosystèmes marins nécessite la collecte et l\'analyse d\'une quantité importante de données. Outils disponibles : Un outil de signalisation permet aux différents participants de renseigner la nature de l\'observation, les informations associées, le type d\'observation réalisée, la date, le lieu-dit, ainsi que leur nom, prénom et e-mail.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie, Communauté Donia
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les trois ans</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Suivi du mouillage Map -->
+              <div class="map-card" data-category="conservation">
+                <div class="map-preview">
+                  <div class="map-image">⚓</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('Suivi du mouillage', 'Le mouillage des bateaux est responsable de dommages physiques sur les habitats marins sensibles comme les herbiers.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      Suivi du mouillage
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('Suivi du mouillage', 'Le mouillage des bateaux est responsable de dommages physiques sur les habitats marins sensibles comme les herbiers. Outils disponibles : La localisation des mouillages AIS entre 2010 et aujourd\'hui classés par année et classe de taille des bateaux en distinguant les mouillages de petite plaisance et de la grande plaisance.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: AIS : Marine traffic, Vesselfinder, Aishub
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CHAMILA Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🏞️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('CHAMILA : Cartographie des habitats en milieux lagunaires', 'Ce projet vise à définir une typologie adaptée au contexte des lagunes méditerranéennes et à établir une première cartographie des habitats au sein des lagunes méditerranéennes françaises.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      CHAMILA : Cartographie des habitats en milieux lagunaires
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('CHAMILA : Cartographie des habitats en milieux lagunaires', 'Ce projet vise à définir une typologie adaptée au contexte des lagunes méditerranéennes et à établir une première cartographie des habitats au sein des lagunes méditerranéennes françaises. Outils disponibles : Cette cartographie permet de mieux comprendre la structure et le fonctionnement de ces écosystèmes, d\'identifier les zones de forte valeur écologique et de contribuer à leur protection et gestion durable.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: IFREMER, Agence de l'eau Rhône Méditerranée et
+                    Corse
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les 3 à 6 ans</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- DONIA Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🗺️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('DONIA : Naviguer, Ancrer et Protéger', 'Ce projet est en lien avec l\'application mobile DONIA® qui permet aux plaisanciers, plongeurs, pêcheurs et à tous les amoureux de la mer, d\'échanger des informations tout en contribuant à protéger les écosystèmes marins sensibles.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      DONIA : Naviguer, Ancrer et Protéger
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('DONIA : Naviguer, Ancrer et Protéger', 'Ce projet est en lien avec l\'application mobile DONIA® qui permet aux plaisanciers, plongeurs, pêcheurs et à tous les amoureux de la mer, d\'échanger des informations tout en contribuant à protéger les écosystèmes marins sensibles. Outils disponibles : L\'application DONIA® propose une cartographie interactive des habitats marins sensibles et des zones de mouillage autorisées, permettant aux usagers de la mer de naviguer de manière responsable.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-meta">
+                    <span class="map-updated"
+                      >Freq: Annuelle pour le projet</span
+                    >
+                  </div>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                </div>
+              </div>
+
+              <!-- DONIA EXPERT Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🗺️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('DONIA EXPERT : Cartographie détaillée des habitats marins', 'La cartographie des fonds marins représente un enjeu pour la connaissance et la gestion des écosystèmes marins quel que soit l\'échelle spatiale considérée.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      DONIA EXPERT : Cartographie détaillée des habitats marins
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('DONIA EXPERT : Cartographie détaillée des habitats marins', 'La cartographie des fonds marins représente un enjeu pour la connaissance et la gestion des écosystèmes marins quel que soit l\'échelle spatiale considérée. Outils disponibles : Cette cartographie s\'appuie sur des méthodes d\'acquisition et de traitement de données standardisées, permettant de caractériser la distribution spatiale des différents habitats marins.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Variable</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Portail Halieutique Map -->
+              <div class="map-card" data-category="conservation">
+                <div class="map-preview">
+                  <div class="map-image">🐟</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('Portail Halieutique Méditerranéen - Réglementation de la pêche', 'Les informations et données sur l\'activité de pêche sont nombreuses, éparses et parfois difficiles d\'accès pour l\'usager.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      Portail Halieutique Méditerranéen
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('Portail Halieutique Méditerranéen - Réglementation de la pêche', 'Les informations et données sur l\'activité de pêche sont nombreuses, éparses et parfois difficiles d\'accès pour l\'usager. Outils disponibles : Ce portail halieutique méditerranéen centralise les informations réglementaires relatives à la pêche en Méditerranée française, facilitant ainsi l\'accès aux textes législatifs, aux arrêtés préfectoraux et aux mesures de gestion des ressources halieutiques.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Journal officiel de la République Française (JORF)
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MAGMA Map -->
+              <div class="map-card" data-category="research">
+                <div class="map-preview">
+                  <div class="map-image">🤖</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('MAGMA : Observatoire par planeur sous-marin', 'Le projet « MAGMA » vise à déployer les planeurs sous-marins SeaExplorer pour apporter une réponse éco-efficiente pour l\'acquisition de données en milieu marin.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      MAGMA : Observatoire par planeur sous-marin
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('MAGMA : Observatoire par planeur sous-marin', 'Le projet « MAGMA » vise à déployer les planeurs sous-marins SeaExplorer pour apporter une réponse éco-efficiente pour l\'acquisition de données en milieu marin. Outils disponibles : Mené par Alseamar en collaboration avec l\'Agence de l\'eau le projet porte sur quatre missions glider s\'étalant sur la période 2015/2018.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les trois ans</span>
+                  </div>
+                  <div class="map-description">Sources: Alseamar, Chorus</div>
+                </div>
+              </div>
+
+              <!-- MEDOBS Map -->
+              <div class="map-card" data-category="research">
+                <div class="map-preview">
+                  <div class="map-image">✈️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('MEDOBS : Observatoire aérien des usages en Méditerranée française', 'L\'observatoire MEDOBS est un observatoire arien des usages en mer conduit à travers un partenariat entre Air Attack Technologies et l\'Agence de l\'eau Rhône Méditerranée Corse.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      MEDOBS : Observatoire aérien des usages
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('MEDOBS : Observatoire aérien des usages en Méditerranée française', 'L\'observatoire MEDOBS est un observatoire arien des usages en mer conduit à travers un partenariat entre Air Attack Technologies et l\'Agence de l\'eau Rhône Méditerranée Corse. Outils disponibles : Cet observatoire permet de surveiller les usages en mer depuis les airs.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                  <div class="map-description">
+                    Sources: Air Attack Technologies
+                  </div>
+                </div>
+              </div>
+
+              <!-- MER-VEILLE Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">📸</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('MER-VEILLE : Observatoire des espèces et des paysages marins', 'L\'observatoire MER-VEILLE est un nouvel outil de suivi visuel des paysages sous-marins et des espèces.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      MER-VEILLE : Observatoire des espèces et des paysages
+                      marins
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('MER-VEILLE : Observatoire des espèces et des paysages marins', 'L\'observatoire MER-VEILLE est un nouvel outil de suivi visuel des paysages sous-marins et des espèces. Outils disponibles : Il offre la possibilité à l\'utilisateur de visualiser des photographies en grand format et de les comparer (pour un même site).')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Variable</span>
+                  </div>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                </div>
+              </div>
+
+              <!-- NADOR Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🏞️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('NADOR : Observatoire de la Lagune de Marchica (MAROC)', 'La lagune de Marchica (ou encore lagune de Nador) est l\'unique lagune sur la façade méditerranéenne du Maroc.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      NADOR : Observatoire de la Lagune de Marchica
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('NADOR : Observatoire de la Lagune de Marchica (MAROC)', 'La lagune de Marchica (ou encore lagune de Nador) est l\'unique lagune sur la façade méditerranéenne du Maroc. Outils disponibles : Elle constitue un exemple de zone côtière vulnérable en pleine mutation socio-économique.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: INRH et Université Mohammed V de Rabat
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les ans</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- OBLADES Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🐠</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('OBLADES : Observatoire sur la Baie de la Ciotat des espèces sous-marines', 'Le GPES (Groupement de Pêche et d\'Etudes Sous-marines) est une association loi 1901 basée à La Ciotat.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      OBLADES : Observatoire sur la Baie de la Ciotat
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('OBLADES : Observatoire sur la Baie de la Ciotat des espèces sous-marines', 'Le GPES (Groupement de Pêche et d\'Etudes Sous-marines) est une association loi 1901 basée à La Ciotat. Outils disponibles : Le GPES est le plus ancien club de plongée subaquatique encore en activité à ce jour à l\'échelle internationale.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Mensuelle</span>
+                  </div>
+                  <div class="map-description">Sources: GPES</div>
+                </div>
+              </div>
+
+              <!-- OBSLAG Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🏞️</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('OBSLAG : OBServatoire des LAGunes méditerranéennes', 'Les lagunes sont des écosystèmes particulièrement vulnérables aux altérations physiques et aux pollutions.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      OBSLAG : Observatoire des lagunes méditerranéennes
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('OBSLAG : OBServatoire des LAGunes méditerranéennes', 'Les lagunes sont des écosystèmes particulièrement vulnérables aux altérations physiques et aux pollutions. Outils disponibles : Les enjeux de restauration de ces écosystèmes sont forts, notamment dans un contexte de changement climatique.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les 3 à 6 ans</span>
+                  </div>
+                  <div class="map-description">
+                    Sources: Ifremer, Tour du Valat
+                  </div>
+                </div>
+              </div>
+
+              <!-- OSE-MED Map -->
+              <div class="map-card" data-category="research">
+                <div class="map-preview">
+                  <div class="map-image">📊</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('OSE-MED : Observatoire socio-économique des usages du littoral et de la mer', 'L\'observatoire OSEMED a été initié en 2009 à travers un partenariat établi entre l\'IRSN et l\'Agence de l\'eau RMC.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      OSE-MED : Observatoire socio-économique
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('OSE-MED : Observatoire socio-économique des usages du littoral et de la mer', 'L\'observatoire OSEMED a été initié en 2009 à travers un partenariat établi entre l\'IRSN et l\'Agence de l\'eau RMC. Outils disponibles : Il vise à acquérir à l\'échelle de la façade méditerranéenne de l\'information récurrente sur la socio-économie des usages du littoral et de la mer à l\'échelle de la façade Méditerranée.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les 5 à 10 ans</span>
+                  </div>
+                  <div class="map-description">
+                    Sources: Université de Versailles (CEARC) et IRSN
+                  </div>
+                </div>
+              </div>
+
+              <!-- STERE 2024 Map -->
+              <div class="map-card" data-category="research">
+                <div class="map-preview">
+                  <div class="map-image">🔬</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('STERE 2024', 'Projet STERE 2024')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      STERE 2024
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('STERE 2024', 'Projet STERE 2024. Outils disponibles : Projet de recherche en cours.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                </div>
+              </div>
+
+              <!-- SULUBAAI Map -->
+              <div class="map-card" data-category="conservation">
+                <div class="map-preview">
+                  <div class="map-image">🌊</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('SULUBAAI', 'Projet SULUBAAI')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      SULUBAAI
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('SULUBAAI', 'Projet SULUBAAI. Outils disponibles : Projet de conservation en cours.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Tous les trois ans</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- eREF Map -->
+              <div class="map-card" data-category="marine-ecology">
+                <div class="map-preview">
+                  <div class="map-image">🐟</div>
+                  <div class="map-overlay">
+                    <button
+                      class="view-btn"
+                      onclick="openSidebar('eREF : Etat de référence de la biodiversité en vertébrés dans les masses d\'eau côtières méditerranéennes', 'Ce projet fourni à l\'utilisateur la possibilité de déposer sa propre liste d\'espèces.')"
+                    >
+                      View Map
+                    </button>
+                  </div>
+                </div>
+                <div class="map-info">
+                  <h4>
+                    <div class="tooltip-container">
+                      eREF : Etat de référence de la biodiversité
+                      <span
+                        class="tooltip-icon"
+                        onclick="openSidebar('eREF : Etat de référence de la biodiversité en vertébrés dans les masses d\'eau côtières méditerranéennes', 'Ce projet fourni à l\'utilisateur la possibilité de déposer sa propre liste d\'espèces. Outils disponibles : Pour cela veuillez cliquer sur l\'onglet Signaler en haut à gauche.')"
+                        >ⓘ</span
+                      >
+                    </div>
+                  </h4>
+                  <div class="map-description">
+                    Sources: Andromède Océanologie
+                  </div>
+                  <div class="map-meta">
+                    <span class="map-updated">Freq: Annuelle</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+
+          <!-- Sliding Sidebar for Tooltip Content -->
+          <div class="sidebar-slide" id="tooltipSidebar">
+            <div class="sidebar-header-slide">
+              <h3 id="sidebarTitle">Mediterranean Surface Temperature</h3>
+              <button class="close-sidebar" onclick="closeSidebar()">×</button>
+            </div>
+            <div class="sidebar-content">
+              <p id="sidebarDescription">
+                Real-time sea surface temperature monitoring with thermal
+                anomalies and seasonal patterns. This map provides comprehensive
+                data for marine research and climate studies.
+              </p>
+              <div class="meta">
+                <h5>Outils disponibles</h5>
+                <p>
+                  En cliquant sur les différents points de la carte,
+                  l'utilisateur peut accéder aux données de température de
+                  surface, visualiser les anomalies thermiques et télécharger
+                  les rapports de surveillance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="medtrix-maps-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

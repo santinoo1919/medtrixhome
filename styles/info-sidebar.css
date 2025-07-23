@@ -90,6 +90,119 @@
   right: 0;
 }
 
+#restau-med-sidebar-toggle:checked ~ .restau-med-sidebar {
+  right: 0;
+}
+
+#atlas-sidebar-toggle:checked ~ .atlas-sidebar {
+  right: 0;
+}
+
+#expeditions-sidebar-toggle:checked ~ .expeditions-sidebar {
+  right: 0;
+}
+
+#calme-sidebar-toggle:checked ~ .calme-sidebar {
+  right: 0;
+}
+
+#calor-sidebar-toggle:checked ~ .calor-sidebar {
+  right: 0;
+}
+
+#cetamed-sidebar-toggle:checked ~ .cetamed-sidebar {
+  right: 0;
+}
+
+#chimie-med-sidebar-toggle:checked ~ .chimie-med-sidebar {
+  right: 0;
+}
+
+#filam-med-sidebar-toggle:checked ~ .filam-med-sidebar {
+  right: 0;
+}
+
+#foramed-sidebar-toggle:checked ~ .foramed-sidebar {
+  right: 0;
+}
+
+#medhab-sidebar-toggle:checked ~ .medhab-sidebar {
+  right: 0;
+}
+
+#littomed-sidebar-toggle:checked ~ .littomed-sidebar {
+  right: 0;
+}
+
+#stare-capmed-sidebar-toggle:checked ~ .stare-capmed-sidebar {
+  right: 0;
+}
+
+#sciences-participatives-sidebar-toggle:checked
+  ~ .sciences-participatives-sidebar {
+  right: 0;
+}
+
+#mouillage-sidebar-toggle:checked ~ .mouillage-sidebar {
+  right: 0;
+}
+
+#typologie-sidebar-toggle:checked ~ .typologie-sidebar {
+  right: 0;
+}
+
+#pim-sidebar-toggle:checked ~ .pim-sidebar {
+  right: 0;
+}
+
+#chamil-sidebar-toggle:checked ~ .chamil-sidebar {
+  right: 0;
+}
+
+#donia-expert-sidebar-toggle:checked ~ .donia-expert-sidebar {
+  right: 0;
+}
+
+#portail-halieutique-sidebar-toggle:checked ~ .portail-halieutique-sidebar {
+  right: 0;
+}
+
+#magma-sidebar-toggle:checked ~ .magma-sidebar {
+  right: 0;
+}
+
+#medobs-sidebar-toggle:checked ~ .medobs-sidebar {
+  right: 0;
+}
+
+#medobs-sub-sidebar-toggle:checked ~ .medobs-sub-sidebar {
+  right: 0;
+}
+
+#mer-veille-sidebar-toggle:checked ~ .mer-veille-sidebar {
+  right: 0;
+}
+
+#nador-sidebar-toggle:checked ~ .nador-sidebar {
+  right: 0;
+}
+
+#oblades-sidebar-toggle:checked ~ .oblades-sidebar {
+  right: 0;
+}
+
+#stere-2024-sidebar-toggle:checked ~ .stere-2024-sidebar {
+  right: 0;
+}
+
+#sulubaa-sidebar-toggle:checked ~ .sulubaa-sidebar {
+  right: 0;
+}
+
+#eref-sidebar-toggle:checked ~ .eref-sidebar {
+  right: 0;
+}
+
 /* Info Header */
 .info-header {
   display: flex;
@@ -134,214 +247,58 @@
   padding-bottom: 100px;
 }
 
-/* Info Section */
-.info-section {
-  margin-bottom: 20px;
+/* Info Section - All sections with containers except description */
+.info-section:not(.description) {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+/* Description sections - add margin bottom for spacing */
+.info-section.description {
+  margin-bottom: var(--space-6);
 }
 
 .info-section h4 {
-  margin: 0 0 8px 0;
+  margin: 0 0 var(--space-4) 0;
   font-size: var(--text-base);
   font-weight: var(--font-semibold);
   color: var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 4px;
+  padding-bottom: var(--space-2);
 }
 
 .info-section p {
-  margin: 0 0 8px 0;
+  margin: 0 0 var(--space-4) 0;
   font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.5;
 }
 
 .info-section ul {
-  margin: 0 0 8px 0;
-  padding-left: 20px;
+  margin: 0 0 var(--space-4) 0;
+  padding-left: var(--space-6);
 }
 
 .info-section li {
   font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.5;
-  margin-bottom: 4px;
+  margin-bottom: var(--space-2);
 }
 
 .info-section li:last-child {
   margin-bottom: 0;
 }
 
-/* RESTAU-MED Sidebar */
-#restau-med-sidebar-toggle:checked ~ .restau-med-sidebar {
-  right: 0;
-}
-
-/* Atlas de synthèse Sidebar */
-#atlas-sidebar-toggle:checked ~ .atlas-sidebar {
-  right: 0;
-}
-
-/* Expéditions scientifiques Sidebar */
-#expeditions-sidebar-toggle:checked ~ .expeditions-sidebar {
-  right: 0;
-}
-
-/* CALME Sidebar */
-#calme-sidebar-toggle:checked ~ .calme-sidebar {
-  right: 0;
-}
-
-/* CALOR Sidebar */
-#calor-sidebar-toggle:checked ~ .calor-sidebar {
-  right: 0;
-}
-
-/* CETAMED Sidebar */
-#cetamed-sidebar-toggle:checked ~ .cetamed-sidebar {
-  right: 0;
-}
-
-/* CHIMIE-Med Sidebar */
-#chimie-med-sidebar-toggle:checked ~ .chimie-med-sidebar {
-  right: 0;
-}
-
-/* FILAM'ED Sidebar */
-#filam-med-sidebar-toggle:checked ~ .filam-med-sidebar {
-  right: 0;
-}
-
-/* FORAMED Sidebar */
-#foramed-sidebar-toggle:checked ~ .foramed-sidebar {
-  right: 0;
-}
-
-/* MEDHAB Sidebar */
-#medhab-sidebar-toggle:checked ~ .medhab-sidebar {
-  right: 0;
-}
-
-/* LITTOMED Sidebar */
-#littomed-sidebar-toggle:checked ~ .littomed-sidebar {
-  right: 0;
-}
-
-/* STARE-CAPMED Sidebar */
-#stare-capmed-sidebar-toggle:checked ~ .stare-capmed-sidebar {
-  right: 0;
-}
-
-/* Sciences participatives Sidebar */
-#sciences-participatives-sidebar-toggle:checked
-  ~ .sciences-participatives-sidebar {
-  right: 0;
-}
-
-/* Suivi du mouillage Sidebar */
-#mouillage-sidebar-toggle:checked ~ .mouillage-sidebar {
-  right: 0;
-}
-
-/* Typologie des outils de gestion Sidebar */
-#typologie-sidebar-toggle:checked ~ .typologie-sidebar {
-  right: 0;
-}
-
-/* Initiative PIM Sidebar */
-#pim-sidebar-toggle:checked ~ .pim-sidebar {
-  right: 0;
-}
-
-/* CHAMILA Sidebar */
-#chamil-sidebar-toggle:checked ~ .chamil-sidebar {
-  right: 0;
-}
-
-/* DONIA EXPERT Sidebar */
-#donia-expert-sidebar-toggle:checked ~ .donia-expert-sidebar {
-  right: 0;
-}
-
-/* Portail Halieutique Sidebar */
-#portail-halieutique-sidebar-toggle:checked ~ .portail-halieutique-sidebar {
-  right: 0;
-}
-
-/* MAGMA Sidebar */
-#magma-sidebar-toggle:checked ~ .magma-sidebar {
-  right: 0;
-}
-
-/* MEDOBS Sidebar */
-#medobs-sidebar-toggle:checked ~ .medobs-sidebar {
-  right: 0;
-}
-
-/* MEDOBS-SUB/OLPAC-MED Sidebar */
-#medobs-sub-sidebar-toggle:checked ~ .medobs-sub-sidebar {
-  right: 0;
-}
-
-/* MER-VEILLE Sidebar */
-#mer-veille-sidebar-toggle:checked ~ .mer-veille-sidebar {
-  right: 0;
-}
-
-/* NADOR Sidebar */
-#nador-sidebar-toggle:checked ~ .nador-sidebar {
-  right: 0;
-}
-
-/* OBLADES Sidebar */
-#oblades-sidebar-toggle:checked ~ .oblades-sidebar {
-  right: 0;
-}
-
-/* STERE 2024 Sidebar */
-#stere-2024-sidebar-toggle:checked ~ .stere-2024-sidebar {
-  right: 0;
-}
-
-/* SULUBAAI Sidebar */
-#sulubaa-sidebar-toggle:checked ~ .sulubaa-sidebar {
-  right: 0;
-}
-
-/* eREF Sidebar */
-#eref-sidebar-toggle:checked ~ .eref-sidebar {
-  right: 0;
+.info-section p:last-child {
+  margin-bottom: 0;
 }
 
 .info-section strong {
   color: var(--text-primary);
   font-weight: 600;
-}
-
-.info-section:last-child {
-  margin-bottom: 0;
-  margin-top: 20px;
-}
-
-.info-section:last-child p {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  color: var(--text-primary) !important;
-  font-weight: 600;
-  background: var(--bg-secondary);
-  padding: 10px;
-  border-radius: 4px;
-  border: 2px solid var(--primary-color);
-}
-
-.info-section:last-child h4 {
-  color: var(--primary-color);
-  font-weight: 700;
-}
-
-.info-section:last-child {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
 }
 
 /* Responsive adjustments */

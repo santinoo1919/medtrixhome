@@ -43,6 +43,10 @@
   transition: var(--transition-fast);
 }
 
+.map-card:hover .map-image {
+  filter: blur(2px);
+}
+
 /* Map Overlay */
 .map-overlay {
   position: absolute;

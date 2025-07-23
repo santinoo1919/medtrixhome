@@ -1,0 +1,47 @@
+/* ===================================
+   CATEGORY FILTERING COMPONENTS
+   =================================== */
+
+/* Category Filtering Logic (CSS-only) */
+.container:has(#marine-ecology:checked)
+  .map-card:not([data-category="marine-ecology"]) {
+  display: none;
+}
+
+.container:has(#fisheries-regulation:checked)
+  .map-card:not([data-category="fisheries-regulation"]) {
+  display: none;
+}
+
+.container:has(#conservation-management:checked)
+  .map-card:not([data-category="conservation-management"]) {
+  display: none;
+}
+
+.container:has(#monitoring-research:checked)
+  .map-card:not([data-category="monitoring-research"]) {
+  display: none;
+}
+
+.container:has(#tools-management:checked)
+  .map-card:not([data-category="tools-management"]) {
+  display: none;
+}
+
+.container:has(#conservation-projects:checked)
+  .map-card:not([data-category="conservation-projects"]) {
+  display: none;
+}
+
+/* Show all cards when "all" is selected */
+.container:has(#all:checked) .map-card {
+  display: block;
+}
+
+/* Category Label Styling */
+input[type="radio"]:checked + .category-label {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-light);
+}

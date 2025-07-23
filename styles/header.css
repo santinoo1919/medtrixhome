@@ -1,0 +1,41 @@
+/* ===================================
+   HEADER COMPONENTS
+   =================================== */
+
+/* Header Row */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-row h3 {
+  margin: 0;
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  text-align: center;
+}

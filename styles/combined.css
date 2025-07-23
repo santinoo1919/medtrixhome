@@ -1,0 +1,1479 @@
+/* ===================================
+   EFFICIENT DESIGN SYSTEM - SINGLE SCREEN
+   =================================== */
+
+:root {
+  /* ===================================
+     ESSENTIAL COLORS - ONLY WHAT WE USE
+     =================================== */
+
+  /* Primary Brand Colors */
+  --primary: #3b82f6;
+  --primary-dark: #133374;
+  --primary-light: #dbeafe;
+
+  /* Neutral Colors */
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+
+  /* ===================================
+     TYPOGRAPHY - SIMPLIFIED SCALE
+     =================================== */
+
+  /* Font Family */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+
+  /* Font Sizes - Only what we use */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+
+  /* Font Weights */
+  --font-normal: 200;
+  --font-medium: 300;
+  --font-semibold: 400;
+  --font-bold: 500;
+
+  /* ===================================
+     SPACING - 8px GRID
+     =================================== */
+
+  --space-2: 0.5rem; /* 8px */
+  --space-4: 1rem; /* 16px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
+
+  /* ===================================
+     BORDER RADIUS
+     =================================== */
+
+  --radius-sm: 0.1rem; /* 4px */
+  --radius: 0.2rem; /* 8px */
+  --radius-lg: 0.3rem; /* 12px */
+
+  /* ===================================
+     SHADOWS
+     =================================== */
+
+  --shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* ===================================
+     TRANSITIONS
+     =================================== */
+
+  --transition: 0.2s ease;
+
+  /* ===================================
+     LEGACY COMPATIBILITY
+     =================================== */
+
+  /* Keep existing variable names for compatibility */
+  --primary-color: var(--primary);
+  --primary-hover: var(--primary-dark);
+  --secondary-color: var(--gray-500);
+  --secondary-hover: var(--gray-600);
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-600);
+  --text-light: var(--gray-500);
+  --bg-primary: var(--white);
+  --bg-secondary: var(--gray-50);
+  --bg-tertiary: var(--gray-100);
+  --border-color: var(--gray-200);
+  --border-light: var(--gray-200);
+  --shadow-light: var(--shadow);
+  --shadow-medium: var(--shadow-md);
+  --shadow-heavy: var(--shadow-lg);
+  --border-radius: var(--radius);
+  --border-radius-sm: var(--radius-sm);
+  --border-radius-lg: var(--radius-lg);
+  --transition-fast: var(--transition);
+}
+
+/* ===================================
+   GLOBAL RESET & BASE STYLES
+   =================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===================================
+   TYPOGRAPHY UTILITIES
+   =================================== */
+
+.text-xs {
+  font-size: var(--text-xs);
+}
+.text-sm {
+  font-size: var(--text-sm);
+}
+.text-base {
+  font-size: var(--text-base);
+}
+.text-lg {
+  font-size: var(--text-lg);
+}
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+.font-normal {
+  font-weight: var(--font-normal);
+}
+.font-medium {
+  font-weight: var(--font-medium);
+}
+.font-semibold {
+  font-weight: var(--font-semibold);
+}
+.font-bold {
+  font-weight: var(--font-bold);
+}
+
+/* ===================================
+   COLOR UTILITIES
+   =================================== */
+
+.text-primary {
+  color: var(--primary);
+}
+.text-gray-500 {
+  color: var(--gray-500);
+}
+.text-gray-600 {
+  color: var(--gray-600);
+}
+.text-gray-900 {
+  color: var(--gray-900);
+}
+
+.bg-gray-50 {
+  background-color: var(--gray-50);
+}
+.bg-gray-100 {
+  background-color: var(--gray-100);
+}
+
+/* ===================================
+   SPACING UTILITIES
+   =================================== */
+
+.p-4 {
+  padding: var(--space-4);
+}
+.p-6 {
+  padding: var(--space-6);
+}
+.p-8 {
+  padding: var(--space-8);
+}
+
+.m-4 {
+  margin: var(--space-4);
+}
+.m-6 {
+  margin: var(--space-6);
+}
+.m-8 {
+  margin: var(--space-8);
+}
+
+/* ===================================
+   SCROLLBAR STYLING
+   =================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* ===================================
+   DESIGN SYSTEM DOCUMENTATION
+   =================================== */
+
+.design-system-demo {
+  padding: 0 var(--space-4);
+  margin: var(--space-8) 0;
+}
+
+.design-system-demo .color-palette {
+  background: var(--primary-light);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+  border-radius: var(--radius);
+}
+
+.design-system-demo .color-palette h3 {
+  color: var(--primary-dark);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.design-system-demo .color-palette p {
+  color: var(--primary-dark);
+  font-size: var(--text-sm);
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.transition {
+  transition: var(--transition);
+}
+/* ===================================
+   CONTAINER & CENTERING
+   =================================== */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-image: url("../assets/images/maps/map-ex.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 46, 0.6) 0%,
+    rgba(22, 33, 62, 0.6) 50%,
+    rgba(15, 52, 96, 0.6) 100%
+  );
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+.modal {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* ===================================
+   MODAL LAYOUT
+   =================================== */
+
+/* Modal Layout */
+.modal {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-xs);
+  box-shadow: var(--shadow-heavy);
+  width: 100%;
+  max-width: 1400px;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Modal Body with Sidebar and Main Content */
+.modal-body {
+  display: flex;
+  height: calc(90vh - 80px);
+  overflow: hidden;
+}
+
+/* Sidebar Layout */
+.sidebar {
+  width: 280px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  padding: 20px;
+}
+
+.sidebar-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Category Navigation */
+.category-nav {
+  padding: 10px 0;
+}
+
+.category-group {
+  margin-bottom: 5px;
+}
+
+.category-group input[type="radio"] {
+  display: none;
+}
+
+.category-label {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
+}
+
+.category-label {
+  position: relative;
+}
+
+.category-label:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+.category-icon {
+  margin-right: 12px;
+  font-size: var(--text-secondary);
+}
+
+.category-group input[type="radio"]:checked + .category-label {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-left: 3px solid var(--primary-color);
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background: var(--bg-primary);
+}
+
+.content-header {
+  margin-bottom: 30px;
+}
+
+.content-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.content-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Maps Grid */
+.maps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* Responsive Grid */
+@media (max-width: 1200px) {
+  .maps-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .maps-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Action Buttons Layout */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Feature Grid Layout */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Settings Form Layout */
+.settings-form {
+  margin-top: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .modal {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    height: calc(95vh - 80px);
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: 200px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .map-preview {
+    height: 120px;
+  }
+
+  .map-image {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-header {
+    padding: 16px 20px;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .maps-grid {
+    gap: 15px;
+  }
+
+  .category-label {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+/* ===================================
+   BUTTON COMPONENTS
+   =================================== */
+
+/* Base Button */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-hover);
+}
+
+/* View Button (for map cards) */
+.view-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.view-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.view-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+}
+
+.view-btn:hover::before {
+  left: 100%;
+}
+
+/* Build Map Button */
+.build-map-btn,
+.build-map-btn::before {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.build-map-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.build-map-btn:hover,
+.build-map-btn:hover::before {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.build-map-btn:hover::before {
+  left: 100%;
+}
+/* ===================================
+   MAP CARD COMPONENTS
+   =================================== */
+
+/* Map Card */
+.map-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-light);
+}
+
+.map-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.map-card.hidden {
+  display: none;
+}
+
+/* Map Preview */
+.map-preview {
+  position: relative;
+  height: 200px;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Map Image */
+.map-image {
+  font-size: 4rem;
+  opacity: 0.8;
+  transition: var(--transition-fast);
+}
+
+/* Map Overlay */
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.map-card:hover .map-overlay {
+  opacity: 1;
+}
+
+/* Map Info */
+.map-info {
+  padding: 16px;
+  background: var(--bg-primary);
+}
+
+.map-info h4 {
+  margin: 0 0 8px 0;
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.map-info p {
+  margin: 0 0 8px 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Map Description */
+.map-description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+/* Map Meta */
+.map-meta {
+  display: flex;
+  gap: 16px;
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  margin-top: 8px;
+}
+
+.map-scale,
+.map-updated {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Feature Card */
+.feature-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  text-align: center;
+}
+
+.feature-card h4 {
+  margin: 0 0 12px 0;
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+/* ===================================
+   FORM COMPONENTS
+   =================================== */
+
+/* Form Group */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-sm);
+  transition: var(--transition-fast);
+}
+
+/* Search Filter */
+.search-filter {
+  margin-bottom: 20px;
+}
+
+.search-input-container {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: var(--text-sm);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+  pointer-events: none;
+  transition: var(--transition-fast);
+}
+
+.search-input:focus + .search-icon {
+  color: var(--primary-color);
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.checkbox-group input {
+  margin: 0;
+}
+/* ===================================
+   HEADER COMPONENTS
+   =================================== */
+
+/* Header Row */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-row h3 {
+  margin: 0;
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  text-align: center;
+}
+/* ===================================
+   NOTIFICATION COMPONENTS
+   =================================== */
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: white;
+  padding: 16px 24px;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-medium);
+  z-index: 1001;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+/* ===================================
+   CATEGORY FILTERING COMPONENTS
+   =================================== */
+
+/* Category Filtering Logic (CSS-only) */
+.container:has(#marine-ecology:checked)
+  .map-card:not([data-category="marine-ecology"]) {
+  display: none;
+}
+
+.container:has(#fisheries-regulation:checked)
+  .map-card:not([data-category="fisheries-regulation"]) {
+  display: none;
+}
+
+.container:has(#conservation-management:checked)
+  .map-card:not([data-category="conservation-management"]) {
+  display: none;
+}
+
+.container:has(#monitoring-research:checked)
+  .map-card:not([data-category="monitoring-research"]) {
+  display: none;
+}
+
+.container:has(#tools-management:checked)
+  .map-card:not([data-category="tools-management"]) {
+  display: none;
+}
+
+.container:has(#conservation-projects:checked)
+  .map-card:not([data-category="conservation-projects"]) {
+  display: none;
+}
+
+/* Show all cards when "all" is selected */
+.container:has(#all:checked) .map-card {
+  display: block;
+}
+
+/* Category Label Styling */
+input[type="radio"]:checked + .category-label {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-light);
+}
+/* ===================================
+   MODAL COMPONENTS
+   =================================== */
+
+/* Map Modal */
+.map-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-fast);
+}
+
+.map-modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-heavy);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+/* Close Modal */
+.close-modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.close-modal:hover {
+  color: var(--text-primary);
+}
+/* ===================================
+   INFO SIDEBAR COMPONENTS
+   =================================== */
+
+/* Hidden checkbox for CSS-only toggle */
+.sidebar-toggle {
+  display: none;
+}
+
+/* Info Sidebar Base */
+.info-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  max-height: 100vh;
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border-color);
+  box-shadow: var(--shadow-heavy);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Radio Button Sidebar Logic - Only one sidebar open at a time */
+/* Each sidebar opens only when its specific radio button is checked */
+#impact-sidebar-toggle:checked ~ .impact-sidebar {
+  right: 0;
+}
+
+#recor-sidebar-toggle:checked ~ .recor-sidebar {
+  right: 0;
+}
+
+#tempo-sidebar-toggle:checked ~ .tempo-sidebar {
+  right: 0;
+}
+
+#piscis-sidebar-toggle:checked ~ .piscis-sidebar {
+  right: 0;
+}
+
+#surfstat-sidebar-toggle:checked ~ .surfstat-sidebar {
+  right: 0;
+}
+
+#donia-sidebar-toggle:checked ~ .donia-sidebar {
+  right: 0;
+}
+
+#respiire-sidebar-toggle:checked ~ .respiire-sidebar {
+  right: 0;
+}
+
+#carlit-sidebar-toggle:checked ~ .carlit-sidebar {
+  right: 0;
+}
+
+#model-sidebar-toggle:checked ~ .model-sidebar {
+  right: 0;
+}
+
+#rompom-sidebar-toggle:checked ~ .rompom-sidebar {
+  right: 0;
+}
+
+#sirenha-sidebar-toggle:checked ~ .sirenha-sidebar {
+  right: 0;
+}
+
+#sediments-sidebar-toggle:checked ~ .sediments-sidebar {
+  right: 0;
+}
+
+#obslag-sidebar-toggle:checked ~ .obslag-sidebar {
+  right: 0;
+}
+
+#ose-med-sidebar-toggle:checked ~ .ose-med-sidebar {
+  right: 0;
+}
+
+#rescor-sidebar-toggle:checked ~ .rescor-sidebar {
+  right: 0;
+}
+
+#lagmed-sidebar-toggle:checked ~ .lagmed-sidebar {
+  right: 0;
+}
+
+/* Info Header */
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.info-header h3 {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+  padding: 4px 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.close-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+/* Info Content */
+.info-content {
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+/* Info Section */
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-section h4 {
+  margin: 0 0 8px 0;
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 4px;
+}
+
+.info-section p {
+  margin: 0 0 8px 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.info-section ul {
+  margin: 0 0 8px 0;
+  padding-left: 20px;
+}
+
+.info-section li {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.info-section li:last-child {
+  margin-bottom: 0;
+}
+
+/* RESTAU-MED Sidebar */
+#restau-med-sidebar-toggle:checked ~ .restau-med-sidebar {
+  right: 0;
+}
+
+/* Atlas de synthèse Sidebar */
+#atlas-sidebar-toggle:checked ~ .atlas-sidebar {
+  right: 0;
+}
+
+/* Expéditions scientifiques Sidebar */
+#expeditions-sidebar-toggle:checked ~ .expeditions-sidebar {
+  right: 0;
+}
+
+/* CALME Sidebar */
+#calme-sidebar-toggle:checked ~ .calme-sidebar {
+  right: 0;
+}
+
+/* CALOR Sidebar */
+#calor-sidebar-toggle:checked ~ .calor-sidebar {
+  right: 0;
+}
+
+/* CETAMED Sidebar */
+#cetamed-sidebar-toggle:checked ~ .cetamed-sidebar {
+  right: 0;
+}
+
+/* CHIMIE-Med Sidebar */
+#chimie-med-sidebar-toggle:checked ~ .chimie-med-sidebar {
+  right: 0;
+}
+
+/* FILAM'ED Sidebar */
+#filam-med-sidebar-toggle:checked ~ .filam-med-sidebar {
+  right: 0;
+}
+
+/* FORAMED Sidebar */
+#foramed-sidebar-toggle:checked ~ .foramed-sidebar {
+  right: 0;
+}
+
+/* MEDHAB Sidebar */
+#medhab-sidebar-toggle:checked ~ .medhab-sidebar {
+  right: 0;
+}
+
+/* LITTOMED Sidebar */
+#littomed-sidebar-toggle:checked ~ .littomed-sidebar {
+  right: 0;
+}
+
+/* STARE-CAPMED Sidebar */
+#stare-capmed-sidebar-toggle:checked ~ .stare-capmed-sidebar {
+  right: 0;
+}
+
+/* Sciences participatives Sidebar */
+#sciences-participatives-sidebar-toggle:checked
+  ~ .sciences-participatives-sidebar {
+  right: 0;
+}
+
+/* Suivi du mouillage Sidebar */
+#mouillage-sidebar-toggle:checked ~ .mouillage-sidebar {
+  right: 0;
+}
+
+/* Typologie des outils de gestion Sidebar */
+#typologie-sidebar-toggle:checked ~ .typologie-sidebar {
+  right: 0;
+}
+
+/* Initiative PIM Sidebar */
+#pim-sidebar-toggle:checked ~ .pim-sidebar {
+  right: 0;
+}
+
+/* CHAMILA Sidebar */
+#chamil-sidebar-toggle:checked ~ .chamil-sidebar {
+  right: 0;
+}
+
+/* DONIA EXPERT Sidebar */
+#donia-expert-sidebar-toggle:checked ~ .donia-expert-sidebar {
+  right: 0;
+}
+
+/* Portail Halieutique Sidebar */
+#portail-halieutique-sidebar-toggle:checked ~ .portail-halieutique-sidebar {
+  right: 0;
+}
+
+/* MAGMA Sidebar */
+#magma-sidebar-toggle:checked ~ .magma-sidebar {
+  right: 0;
+}
+
+/* MEDOBS Sidebar */
+#medobs-sidebar-toggle:checked ~ .medobs-sidebar {
+  right: 0;
+}
+
+/* MEDOBS-SUB/OLPAC-MED Sidebar */
+#medobs-sub-sidebar-toggle:checked ~ .medobs-sub-sidebar {
+  right: 0;
+}
+
+/* MER-VEILLE Sidebar */
+#mer-veille-sidebar-toggle:checked ~ .mer-veille-sidebar {
+  right: 0;
+}
+
+/* NADOR Sidebar */
+#nador-sidebar-toggle:checked ~ .nador-sidebar {
+  right: 0;
+}
+
+/* OBLADES Sidebar */
+#oblades-sidebar-toggle:checked ~ .oblades-sidebar {
+  right: 0;
+}
+
+/* STERE 2024 Sidebar */
+#stere-2024-sidebar-toggle:checked ~ .stere-2024-sidebar {
+  right: 0;
+}
+
+/* SULUBAAI Sidebar */
+#sulubaa-sidebar-toggle:checked ~ .sulubaa-sidebar {
+  right: 0;
+}
+
+/* eREF Sidebar */
+#eref-sidebar-toggle:checked ~ .eref-sidebar {
+  right: 0;
+}
+
+.info-section strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.info-section:last-child {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.info-section:last-child p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  background: var(--bg-secondary);
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--primary-color);
+}
+
+.info-section:last-child h4 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.info-section:last-child {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .info-sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .info-content {
+    padding: 16px;
+  }
+
+  .info-header {
+    padding: 16px;
+  }
+}

@@ -81,7 +81,9 @@
 
 /* Build Map Button */
 .build-map-btn,
-.build-map-btn::before {
+.build-map-btn::before,
+.key-metrics-btn,
+.key-metrics-btn::before {
   background: var(--primary-color);
   color: white;
   border: none;
@@ -99,7 +101,8 @@
   overflow: hidden;
 }
 
-.build-map-btn::before {
+.build-map-btn::before,
+.key-metrics-btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -116,12 +119,14 @@
 }
 
 .build-map-btn:hover,
-.build-map-btn:hover::before {
+.build-map-btn:hover::before,
+.key-metrics-btn:hover,
+.key-metrics-btn:hover::before {
   background: var(--primary-hover);
-  transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
 }
 
-.build-map-btn:hover::before {
+.build-map-btn:hover::before,
+.key-metrics-btn:hover::before {
   left: 100%;
 }

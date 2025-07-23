@@ -30,12 +30,34 @@
   border-bottom: 1px solid var(--border-color);
   background: var(--bg-secondary);
   border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal-header-content {
+  flex: 1;
+  margin-right: 20px;
 }
 
 .modal-title {
-  margin: 0;
+  margin: 0 0 8px 0;
   font-size: var(--text-2xl);
   font-weight: var(--font-bold);
   color: var(--text-primary);
-  text-align: center;
+}
+
+.modal-description {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.4;
+  max-width: 500px;
+}
+
+.modal-header-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
 }

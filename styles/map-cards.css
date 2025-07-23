@@ -87,15 +87,14 @@
 .map-description {
   visibility: hidden;
   min-height: 1.2em; /* Maintain space for layout */
-  position: relative;
 }
 
 .map-description::after {
-  content: "Voir projet";
+  content: "Voir projet ↗";
   visibility: visible;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 8px; /* Account for card padding */
+  left: 8px; /* Account for card padding */
   color: var(--primary);
   text-decoration: underline;
   cursor: pointer;

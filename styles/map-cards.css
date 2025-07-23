@@ -34,8 +34,12 @@
 
 /* Map Image */
 .map-image {
-  font-size: 4rem;
-  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/maps/restaumed.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   transition: var(--transition-fast);
 }
 
@@ -46,7 +50,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,12 +83,46 @@
   line-height: 1.4;
 }
 
-/* Map Description */
+/* Replace Sources and Frequency text with "Voir projet" link */
 .map-description {
-  font-size: var(--text-sm);
+  visibility: hidden;
+  min-height: 1.2em; /* Maintain space for layout */
+  position: relative;
+}
+
+.map-description::after {
+  content: "Voir projet";
+  visibility: visible;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--primary);
+  text-decoration: underline;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Add tooltip at bottom right */
+.map-card {
+  position: relative; /* Ensure the card is the positioning context */
+}
+
+.map-meta {
+  visibility: hidden;
+  min-height: 1.2em; /* Maintain space for layout */
+}
+
+.map-meta::after {
+  content: "💬";
+  visibility: visible;
+  position: absolute;
+  bottom: 8px; /* Account for card padding */
+  right: 8px; /* Account for card padding */
   color: var(--text-secondary);
-  margin-bottom: 8px;
-  font-style: italic;
+  font-size: 1.2em;
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 /* Map Meta */
@@ -94,6 +132,8 @@
   font-size: var(--text-xs);
   color: var(--text-tertiary);
   margin-top: 8px;
+  visibility: hidden;
+  min-height: 1.2em; /* Maintain space for layout */
 }
 
 .map-scale,

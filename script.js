@@ -130,8 +130,23 @@ function buildOwnMap() {
   // - Map sharing capabilities
 }
 
+// Key Metrics functionality
+function showKeyMetrics() {
+  // For now, show an alert with key metrics information
+  alert(
+    "📊 Key Metrics Dashboard Coming Soon!\n\nThis feature will display:\n• Total number of monitoring sites\n• Data collection frequency\n• Geographic coverage\n• Latest updates\n• Performance indicators\n\nStay tuned for the metrics dashboard!"
+  );
+
+  // Future implementation could include:
+  // - Interactive metrics dashboard
+  // - Real-time data visualization
+  // - Performance charts and graphs
+  // - Export capabilities
+}
+
 // Export functions for global access
 window.openSidebar = openSidebar;
 window.closeSidebar = closeSidebar;
 window.searchMaps = searchMaps;
 window.buildOwnMap = buildOwnMap;
+window.showKeyMetrics = showKeyMetrics;

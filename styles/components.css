@@ -71,15 +71,12 @@
 }
 
 /* ===================================
-   TOOLTIP COMPONENTS - MULTIPLE STYLES
+   TOOLTIP COMPONENTS - SIMPLE UNICODE
    =================================== */
 
-/* Style 1: Classic Tooltip (Current) */
 .tooltip-container {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: inline;
 }
 
 .tooltip-icon {
@@ -87,207 +84,29 @@
   color: var(--gray-400);
   font-size: var(--text-xs);
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  z-index: 10;
+}
+
+/* CSS-only info icon using ::before */
+.tooltip-icon::before {
+  content: "ℹ️";
+  font-size: 10px;
+  line-height: 1;
+  color: var(--gray-600);
 }
 
 .tooltip-icon:hover {
   color: var(--gray-600);
 }
 
-.tooltip {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--gray-800);
-  color: white;
-  padding: 8px 12px;
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s ease;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-.tooltip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 4px solid transparent;
-  border-top-color: var(--gray-800);
-}
-
-.tooltip-container:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Style 2: Light Tooltip */
-.tooltip-light {
-  position: absolute;
-  top: -35px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
+.tooltip-icon:hover::before {
   color: var(--gray-800);
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  pointer-events: none;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--gray-200);
-}
-
-.tooltip-light::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 4px solid transparent;
-  border-top-color: white;
-}
-
-.tooltip-container:hover .tooltip-light {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Style 3: Colored Tooltip */
-.tooltip-colored {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--primary);
-  color: white;
-  padding: 8px 12px;
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s ease;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-.tooltip-colored::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 4px solid transparent;
-  border-top-color: var(--primary);
-}
-
-.tooltip-container:hover .tooltip-colored {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Style 4: Slide-in Tooltip */
-.tooltip-slide {
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 10px);
-  transform: translateY(-50%);
-  background: var(--gray-800);
-  color: white;
-  padding: 8px 12px;
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-.tooltip-slide::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  transform: translateY(-50%);
-  border: 4px solid transparent;
-  border-right-color: var(--gray-800);
-}
-
-.tooltip-container:hover .tooltip-slide {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(-50%) translateX(0);
-}
-
-/* Style 5: Fade Tooltip (No Arrow) */
-.tooltip-fade {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s ease;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-.tooltip-container:hover .tooltip-fade {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Style 6: Bounce Tooltip */
-.tooltip-bounce {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%) scale(0.8);
-  background: var(--gray-800);
-  color: white;
-  padding: 8px 12px;
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  z-index: 1000;
-  pointer-events: none;
-}
-
-.tooltip-bounce::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 4px solid transparent;
-  border-top-color: var(--gray-800);
-}
-
-.tooltip-container:hover .tooltip-bounce {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) scale(1);
 }
 
 /* ===================================
@@ -580,4 +399,209 @@
   margin: 0;
   font-size: var(--text-sm);
   color: var(--text-secondary);
+}
+
+/* ===================================
+   HEADER COMPONENTS
+   =================================== */
+
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.header-row h3 {
+  margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.build-map-btn,
+.key-metrics-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.build-map-btn::before,
+.key-metrics-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.build-map-btn:hover,
+.key-metrics-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+}
+
+.build-map-btn:hover::before,
+.key-metrics-btn:hover::before {
+  left: 100%;
+}
+
+/* ===================================
+   SEARCH FILTER COMPONENTS
+   =================================== */
+
+.search-filter {
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.search-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-sm);
+  background: white;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-input::placeholder {
+  color: var(--gray-400);
+  font-style: italic;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  color: var(--gray-400);
+  font-size: var(--text-sm);
+  pointer-events: none;
+}
+
+.search-input:focus + .search-icon {
+  color: var(--primary-color);
+}
+
+/* ===================================
+   MODAL HEADER COMPONENTS
+   =================================== */
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===================================
+   CATEGORY FILTERING
+   =================================== */
+
+/* Category filtering - simple approach */
+.map-card {
+  display: block;
+}
+
+/* When a specific category is selected, hide others */
+.container:has(#marine-ecology:checked)
+  .map-card:not([data-category="marine-ecology"]) {
+  display: none;
+}
+
+.container:has(#fisheries:checked) .map-card:not([data-category="fisheries"]) {
+  display: none;
+}
+
+.container:has(#conservation:checked)
+  .map-card:not([data-category="conservation"]) {
+  display: none;
+}
+
+.container:has(#research:checked) .map-card:not([data-category="research"]) {
+  display: none;
+}
+
+.container:has(#pollution:checked) .map-card:not([data-category="pollution"]) {
+  display: none;
+}
+
+/* Show all maps when "All Maps" is selected */
+.container:has(#all:checked) .map-card {
+  display: block;
+}
+
+/* Selected category styling */
+input[type="radio"]:checked + .category-label {
+  background-color: #007bff;
+  color: white;
+}
+
+/* ===================================
+   MODAL COMPONENTS
+   =================================== */
+
+.map-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.map-modal:target {
+  display: block;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-modal {
+  font-size: 24px;
+  font-weight: bold;
+  color: #999;
+  text-decoration: none;
+}
+
+.close-modal:hover {
+  color: #000;
 }

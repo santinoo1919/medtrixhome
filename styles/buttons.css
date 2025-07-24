@@ -6,7 +6,7 @@
 .btn {
   padding: 12px 24px;
   border: none;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-xs);
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
   cursor: pointer;
@@ -28,7 +28,6 @@
 .btn-primary:hover {
   background: var(--primary-hover);
   box-shadow: var(--shadow-medium);
-  transform: translateY(-1px);
 }
 
 /* Secondary Button */
@@ -41,7 +40,7 @@
   background: var(--gray-300);
   color: var(--gray-800);
   border-color: var(--gray-400);
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--shadow-medium);
 }
 
 /* Small Button Variant (for overlays) */

@@ -69,14 +69,14 @@
   padding: 12px 20px;
   cursor: pointer;
   transition: var(--transition-fast);
-  color: var(--text-primary);
+  color: var(--gray-500);
   font-weight: var(--font-medium);
   font-size: var(--text-sm);
   position: relative;
 }
 
 .category-label:hover {
-  background-color: var(--gray-100);
+  color: var(--gray-900);
 }
 
 .category-icon {
@@ -86,9 +86,7 @@
 
 /* Category Label Styling - Active State */
 input[type="radio"]:checked + .category-label {
-  background: var(--gray-500);
-  color: white;
-  box-shadow: var(--shadow-light);
+  color: var(--primary);
   font-weight: var(--font-semibold);
 }
 

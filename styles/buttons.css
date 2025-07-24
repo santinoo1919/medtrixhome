@@ -4,90 +4,8 @@
 
 /* Base Button */
 .btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: var(--border-radius-sm);
-  font-size: var(--text-base);
-  font-weight: var(--font-semibold);
-  cursor: pointer;
-  transition: var(--transition-fast);
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-}
-
-/* Primary Button */
-.btn-primary {
-  background: var(--primary-color);
-  color: white;
-}
-
-.btn-primary:hover {
-  background: var(--primary-hover);
-  transform: translateY(-1px);
-}
-
-/* Secondary Button */
-.btn-secondary {
-  background: var(--secondary-color);
-  color: white;
-}
-
-.btn-secondary:hover {
-  background: var(--secondary-hover);
-}
-
-/* View Button (for map cards) */
-.view-btn {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: var(--border-radius-sm);
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
-  cursor: pointer;
-  transition: var(--transition-fast);
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.view-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.6),
-    transparent
-  );
-  transition: left 0.8s ease;
-}
-
-.view-btn:hover {
-  background: var(--primary-hover);
-  box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
-}
-
-.view-btn:hover::before {
-  left: 100%;
-}
-
-/* Build Map Button */
-.build-map-btn,
-.build-map-btn::before,
-.key-metrics-btn,
-.key-metrics-btn::before {
-  background: var(--primary-color);
-  color: white;
-  border: none;
   padding: 12px 24px;
+  border: none;
   border-radius: var(--border-radius-md);
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
@@ -101,32 +19,34 @@
   overflow: hidden;
 }
 
-.build-map-btn::before,
-.key-metrics-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
-  transition: left 0.6s ease;
+/* Primary Button */
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
 }
 
-.build-map-btn:hover,
-.build-map-btn:hover::before,
-.key-metrics-btn:hover,
-.key-metrics-btn:hover::before {
+.btn-primary:hover {
   background: var(--primary-hover);
   box-shadow: var(--shadow-medium);
+  transform: translateY(-1px);
 }
 
-.build-map-btn:hover::before,
-.key-metrics-btn:hover::before {
-  left: 100%;
+/* Secondary Button */
+.btn-secondary {
+  background: var(--gray-200);
+  color: var(--gray-700);
+}
+
+.btn-secondary:hover {
+  background: var(--gray-300);
+  color: var(--gray-800);
+  border-color: var(--gray-400);
+  box-shadow: var(--shadow-light);
+}
+
+/* Small Button Variant (for overlays) */
+.btn.btn-sm {
+  padding: 10px 20px;
+  font-size: var(--text-sm);
+  border-radius: var(--border-radius-sm);
 }

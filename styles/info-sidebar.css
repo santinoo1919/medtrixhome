@@ -11,13 +11,13 @@
 .info-sidebar {
   position: fixed;
   top: 0;
-  right: -400px;
+  right: -420px;
   width: 400px;
   height: 100vh;
   max-height: 100vh;
   background: var(--bg-primary);
   border-left: 1px solid var(--border-color);
-  box-shadow: var(--shadow-heavy);
+  box-shadow: var(--shadow-md);
   transition: right 0.3s ease;
   z-index: 1000;
   overflow-y: auto;

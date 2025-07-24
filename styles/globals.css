@@ -8,20 +8,22 @@
      =================================== */
 
   /* Primary Brand Colors */
-  --primary: #3b82f6;
-  --primary-dark: #133374;
-  --primary-light: #dbeafe;
+  --primary: #86c2eb;
+  --primary-dark: #5bace4;
+  --primary-light: #b2d8f2;
 
-  /* Neutral Colors */
-  --white: #ffffff;
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-300: #d1d5db;
-  --gray-400: #9ca3af;
-  --gray-500: #6b7280;
-  --gray-600: #4b5563;
-  --gray-900: #111827;
+  /* Neutral Colors - Subtle blue-tinted greys */
+  --white: #fafbfc;
+  --gray-50: #f5f7fa;
+  --gray-100: #eef2f7;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
 
   /* ===================================
      TYPOGRAPHY - SIMPLIFIED SCALE
@@ -57,18 +59,18 @@
      BORDER RADIUS
      =================================== */
 
+  --radius-xs: 0.05rem; /* 2px */
   --radius-sm: 0.1rem; /* 4px */
-  --radius: 0.2rem; /* 8px */
+  --radius-md: 0.2rem; /* 8px */
   --radius-lg: 0.3rem; /* 12px */
 
   /* ===================================
-     SHADOWS
+     SHADOWS (Apple Human Interface Guidelines)
      =================================== */
 
-  --shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
 
   /* ===================================
      TRANSITIONS
@@ -98,6 +100,7 @@
   --shadow-heavy: var(--shadow-lg);
   --border-radius: var(--radius);
   --border-radius-sm: var(--radius-sm);
+  --border-radius-md: var(--radius-md);
   --border-radius-lg: var(--radius-lg);
   --transition-fast: var(--transition);
 }

@@ -6,15 +6,49 @@
 .map-card {
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  transition: var(--transition-fast);
+  border-radius: var(--radius-xs);
   box-shadow: var(--shadow-light);
+  overflow: hidden;
+  transition: var(--transition);
+  animation: slideInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Staggered animation using mathematical patterns */
+.map-card:nth-child(6n + 1) {
+  animation-delay: 0.1s;
+}
+.map-card:nth-child(6n + 2) {
+  animation-delay: 0.2s;
+}
+.map-card:nth-child(6n + 3) {
+  animation-delay: 0.3s;
+}
+.map-card:nth-child(6n + 4) {
+  animation-delay: 0.4s;
+}
+.map-card:nth-child(6n + 5) {
+  animation-delay: 0.5s;
+}
+.map-card:nth-child(6n + 6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .map-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--shadow-md);
 }
 
 .map-card.hidden {
@@ -40,7 +74,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: var(--transition-fast);
+  transition: var(--transition);
 }
 
 .map-card:hover .map-image {
@@ -59,7 +93,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: var(--transition-fast);
+  transition: var(--transition);
 }
 
 .map-card:hover .map-overlay {
@@ -68,42 +102,47 @@
 
 /* Map Info */
 .map-info {
-  padding: 16px;
+  padding: var(--space-4);
   background: var(--bg-primary);
 }
 
 .map-info h4 {
-  margin: 0 0 8px 0;
-  font-size: var(--text-lg);
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--text-md);
   font-weight: var(--font-semibold);
   color: var(--text-primary);
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .map-info p {
-  margin: 0 0 8px 0;
+  margin: 0 0 var(--space-2) 0;
   font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.4;
 }
 
-/* Replace Sources and Frequency text with "Voir projet" link */
+/* Project Link */
+.map-project-link {
+  position: absolute;
+  bottom: var(--space-2);
+  left: var(--space-2);
+  color: var(--primary);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.map-project-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+/* Hide original description text */
 .map-description {
   visibility: hidden;
   min-height: 1.2em; /* Maintain space for layout */
-}
-
-.map-description::after {
-  content: "Voir projet ↗";
-  visibility: visible;
-  position: absolute;
-  bottom: 8px; /* Account for card padding */
-  left: 8px; /* Account for card padding */
-  color: var(--primary);
-  text-decoration: underline;
-  cursor: pointer;
-  font-style: normal;
-  font-weight: 500;
 }
 
 /* Add tooltip at bottom right */
@@ -117,11 +156,11 @@
 }
 
 .map-meta::after {
-  content: "💬";
+  content: "ℹ️";
   visibility: visible;
   position: absolute;
-  bottom: 8px; /* Account for card padding */
-  right: 8px; /* Account for card padding */
+  bottom: var(--space-2); /* Account for card padding */
+  right: var(--space-2); /* Account for card padding */
   color: var(--text-secondary);
   font-size: 1.2em;
   cursor: pointer;
@@ -131,10 +170,10 @@
 /* Map Meta */
 .map-meta {
   display: flex;
-  gap: 16px;
+  gap: var(--space-4);
   font-size: var(--text-xs);
-  color: var(--text-tertiary);
-  margin-top: 8px;
+  color: var(--text-light);
+  margin-top: var(--space-2);
   visibility: hidden;
   min-height: 1.2em; /* Maintain space for layout */
 }
@@ -150,13 +189,13 @@
 .feature-card {
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-md);
-  padding: 20px;
+  border-radius: var(--radius);
+  padding: var(--space-6);
   text-align: center;
 }
 
 .feature-card h4 {
-  margin: 0 0 12px 0;
+  margin: 0 0 var(--space-4) 0;
   font-size: var(--text-lg);
   font-weight: var(--font-semibold);
   color: var(--text-primary);

@@ -2,6 +2,18 @@
    CATEGORY FILTERING COMPONENTS
    =================================== */
 
+/* Category Header */
+.sidebar-header {
+  padding: 20px;
+}
+
+.sidebar-header h3 {
+  font-size: var(--text-md);
+  font-weight: var(--font-semibold);
+  color: var(--gray-800);
+  margin: 0;
+}
+
 /* Category Filtering Logic (CSS-only) */
 .container:has(#marine-ecology:checked)
   .map-card:not([data-category="marine-ecology"]) {
@@ -64,8 +76,7 @@
 }
 
 .category-label:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: var(--text-primary);
+  background-color: var(--gray-100);
 }
 
 .category-icon {
@@ -75,7 +86,7 @@
 
 /* Category Label Styling - Active State */
 input[type="radio"]:checked + .category-label {
-  background: var(--secondary-color);
+  background: var(--gray-500);
   color: white;
   box-shadow: var(--shadow-light);
   font-weight: var(--font-semibold);

@@ -15,33 +15,43 @@
 }
 
 /* Category Filtering Logic (CSS-only) */
-.container:has(#marine-ecology:checked)
-  .map-card:not([data-category="marine-ecology"]) {
+.container:has(#cartographie-des-habitats:checked)
+  .map-card:not([data-category="cartographie-des-habitats"]) {
   display: none;
 }
 
-.container:has(#fisheries-regulation:checked)
-  .map-card:not([data-category="fisheries-regulation"]) {
+.container:has(#etat-des-eaux-cotieres-et-de-transition:checked)
+  .map-card:not([data-category="etat-des-eaux-cotieres-et-de-transition"]) {
   display: none;
 }
 
-.container:has(#conservation-management:checked)
-  .map-card:not([data-category="conservation-management"]) {
+.container:has(#expeditions-scientifiques:checked)
+  .map-card:not([data-category="expeditions-scientifiques"]) {
   display: none;
 }
 
-.container:has(#monitoring-research:checked)
-  .map-card:not([data-category="monitoring-research"]) {
+.container:has(#gestion-cotiere:checked)
+  .map-card:not([data-category="gestion-cotiere"]) {
   display: none;
 }
 
-.container:has(#tools-management:checked)
-  .map-card:not([data-category="tools-management"]) {
+.container:has(#observatoires-et-sites-ateliers:checked)
+  .map-card:not([data-category="observatoires-et-sites-ateliers"]) {
   display: none;
 }
 
-.container:has(#conservation-projects:checked)
-  .map-card:not([data-category="conservation-projects"]) {
+.container:has(#reseaux-de-surveillance:checked)
+  .map-card:not([data-category="reseaux-de-surveillance"]) {
+  display: none;
+}
+
+.container:has(#restauration-ecologique:checked)
+  .map-card:not([data-category="restauration-ecologique"]) {
+  display: none;
+}
+
+.container:has(#sciences-participatives:checked)
+  .map-card:not([data-category="sciences-participatives"]) {
   display: none;
 }
 

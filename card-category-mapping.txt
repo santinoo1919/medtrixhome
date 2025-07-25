@@ -1,0 +1,202 @@
+CARD CATEGORY MAPPING
+====================
+
+Current cards with their titles and current categories. 
+Please assign each card to one of the new categories:
+
+NEW CATEGORIES:
+- cartographie-des-habitats (Cartographie des habitats)
+- etat-des-eaux-cotieres-et-de-transition (État des eaux côtières et de transition)
+- expeditions-scientifiques (Expéditions scientifiques)
+- gestion-cotiere (Gestion côtière)
+- observatoires-et-sites-ateliers (Observatoires et sites ateliers)
+- reseaux-de-surveillance (Réseaux de Surveillance)
+- restauration-ecologique (Restauration écologique)
+- sciences-participatives (Sciences participatives)
+
+CURRENT CARDS:
+==============
+
+1. IMPACT : Réseau de suivi des pressions anthropiques côtières
+   Current: marine-ecology
+   Suggested: cartographie-des-habitats
+
+2. RECOR : Suivi des assemblages coralligènes en Méditerranée française
+   Current: marine-ecology
+   Suggested: reseaux-de-surveillance
+
+3. TEMPO : Suivi des herbiers à Posidonie en Méditerranée française
+   Current: marine-ecology
+   Suggested: reseaux-de-surveillance
+
+4. PISCIS : Suivi des assemblages ichtyologiques
+   Current: marine-ecology
+   reseaux-de-surveillance
+
+5. SURFSTAT : Analyse surfacique des habitats marins
+   Current: monitoring-research
+   Suggested: reseaux-de-surveillance
+
+6. DONIA : Naviguer, Ancrer et Protéger
+   Current: marine-ecology
+   Suggested: cartographie-des-habitats
+
+7. RESPIRE : Surveillance du recrutement larvaire en Méditerranée française
+   Current: marine-ecology
+   Suggested: reseaux-de-surveillance
+
+8. CARLIT : Évaluation de l'état écologique du littoral rocheux méditerranéen français
+   Current: marine-ecology
+   Suggested: etat-des-eaux-cotieres-et-de-transition
+
+9. MODEL : Modélisation 3D des habitats marins
+   Current: marine-ecology
+   Suggested: reseaux-de-surveillance
+
+10. ROMPOM : Réseau d'Observation Méditerranéen des Polluants par les Oiseaux Marins
+    Current: marine-ecology
+    Suggested: reseaux-de-surveillance
+
+11. SIRENHA : SuivI des REssources Naturelles Halieutiques par Acoustique
+    Current: marine-ecology
+    Suggested: reseaux-de-surveillance
+
+12. Sédiments : Caractérisation sédimentologique du littoral de la Corse
+    Current: marine-ecology
+    Suggested: reseaux-de-surveillance
+
+13. OBSLAG : Observatoire des lagunes méditerranéennes
+    Current: marine-ecology
+    Suggested: observatoires-et-sites-ateliers
+
+14. OSE-MED : Observatoire des Sédiments en Méditerranée
+    Current: monitoring-research
+    Suggested: observatoires-et-sites-ateliers
+
+15. RESCOR : Réseau de surveillance des coraux en Méditerranée
+    Current: marine-ecology
+    Suggested: reseaux-de-surveillance
+
+16. LAGMED : Réseau de surveillance des lagunes méditerranéennes
+    Current: monitoring-research
+    Suggested: etat-des-eaux-cotieres-et-de-transition
+
+17. RESTAU-MED : Restauration écologique en zone côtière Méditerranéenne
+    Current: conservation-management
+    Suggested: restauration-ecologique
+
+18. Atlas de synthèse - Surveillance biologique et Qualité des eaux de Méditerranée
+    Current: marine-ecology
+    Suggested: etat-des-eaux-cotieres-et-de-transition
+
+19. Expéditions scientifiques - Présentation des résultats des différentes expéditions
+    Current: monitoring-research
+    Suggested: expeditions-scientifiques
+
+20. CALME : Caractérisation Acoustique du Littoral Méditerranéen et de ses Ecosystèmes
+    Current: monitoring-research
+    Suggested: reseaux-de-surveillance
+
+21. CALOR : Suivi de la température en Méditerranée française
+    Current: monitoring-research
+    Suggested: reseaux-de-surveillance
+
+22. CETAMED : Surveillance chimique de la chaîne trophique basée sur les échouages de mammifères marins
+    Current: marine-ecology
+    Suggested: reseaux-de-surveillance
+
+23. CHIMIE-Med : Caractérisation de la pollution des eaux côtières en Méditerranée française
+    Current: monitoring-research
+    Suggested: reseaux-de-surveillance
+
+24. FILAM'ED : Suivi des algues filamenteuses en Méditerranée française
+    Current: marine-ecology
+    Suggested: reseaux-de-surveillance
+
+25. FORAMED : Étude des foraminifères benthiques en Méditerranée française
+    Current: monitoring-research
+    Suggested: reseaux-de-surveillance
+
+26. MEDHAB : Evaluation et gestion des habitats essentiels des poissons méditerranéens
+    Current: marine-ecology
+    Suggested: reseaux-de-surveillance
+
+27. LITTOMED : Suivi de la qualité des eaux côtières en Méditerranée française
+    Current: monitoring-research
+    Suggested: etat-des-eaux-cotieres-et-de-transition
+
+28. STARE-CAPMED : Station of Reference and rEsearch on Change of local and global Anthropogenic Pressures on Mediterranean Ecosystems Drifts
+    Current: monitoring-research
+    Suggested: observatoires-et-sites-ateliers
+
+29. Sciences participatives - Projet participatif
+    Current: monitoring-research
+    Suggested: sciences-participatives
+
+30. Suivi du mouillage
+    Current: conservation-management
+    Suggested: gestion-cotiere
+
+31. Typologie des outils de gestion de l'espace littoral et marin
+    Current: conservation-management
+    Suggested: gestion-cotiere
+
+32. Initiative PIM : Petites Iles de Méditerranée
+    Current: marine-ecology
+    Suggested: gestion-cotiere
+
+33. CHAMILA : Cartographie des habitats en milieux lagunaires
+    Current: marine-ecology
+    Suggested: cartographie-des-habitats
+
+34. DONIA EXPERT : Cartographie détaillée des habitats marins
+    Current: monitoring-research
+    Suggested: cartographie-des-habitats
+
+35. Portail Halieutique Méditerranéen - Réglementation de la pêche
+    Current: fisheries-regulation
+    Suggested: gestion-cotiere
+
+36. MAGMA : Observatoire par planeur sous-marin
+    Current: monitoring-research
+    Suggested: observatoires-et-sites-ateliers
+
+37. MEDOBS : Observatoire aérien des usages en Méditerranée française
+    Current: monitoring-research
+    Suggested: observatoires-et-sites-ateliers
+
+38. MEDOBS-SUB/OLPAC-MED : Observatoires citoyens des usages et pressions en mer
+    Current: monitoring-research
+    Suggested: sciences-participatives
+
+39. MER-VEILLE : Observatoire des espèces et des paysages marins
+    Current: marine-ecology
+    Suggested: observatoires-et-sites-ateliers
+
+40. NADOR : Observatoire de la Lagune de Marchica (MAROC)
+    Current: monitoring-research
+    Suggested: observatoires-et-sites-ateliers
+
+41. OBLADES : Observatoire sur la Baie de la Ciotat des espèces sous-marines
+    Current: monitoring-research
+    Suggested: observatoires-et-sites-ateliers
+
+42. STERE 2024
+    Current: monitoring-research
+    Suggested: expeditions-scientifiques
+
+43. SULUBAAI
+    Current: marine-ecology
+    Suggested: restauration-ecologique
+
+44. eREF
+    Current: monitoring-research
+    Suggested: reseaux-de-surveillance
+
+INSTRUCTIONS:
+=============
+1. Review the suggested categories above
+2. Change any suggestions you disagree with
+3. Use the new category IDs (with hyphens)
+4. Return this file with your changes
+5. I'll then apply all the changes at once 

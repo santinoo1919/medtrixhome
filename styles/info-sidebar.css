@@ -111,7 +111,7 @@
 }
 
 #cetamed-sidebar-toggle:checked ~ .cetamed-sidebar {
-  right: 0;
+  right: 0 !important;
 }
 
 #chimie-med-sidebar-toggle:checked ~ .chimie-med-sidebar {

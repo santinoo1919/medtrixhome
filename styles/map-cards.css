@@ -159,6 +159,15 @@
   transition: var(--transition);
 }
 
+/* Disable "Information à venir" links */
+.map-project-link[href="#"] {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #999;
+  text-decoration: none;
+}
+
 /* Hide original description text */
 .map-description {
   display: none; /* Completely remove from layout */

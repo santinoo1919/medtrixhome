@@ -1,0 +1,220 @@
+PROJECT LINKS & CONTACTS
+========================
+
+This file contains all project links and contact information for each map card.
+Update the links and contacts here, then I'll apply them to the HTML.
+
+FORMAT:
+- Project Name: [Link] | [Contact Info]
+
+CATEGORY: Cartographie des habitats
+===================================
+
+1. IMPACT : Réseau de suivi des pressions anthropiques côtières
+   Link: https://medtrix.fr/portfolio_page/impact/
+   Contact: Thomas Bockel (thomas.bockel@andromede-ocean.com) / Florian Holon (florian.holon@andromede-ocean.com)
+
+2. DONIA : Naviguer, Ancrer et Protéger
+   Link: https://medtrix.fr/portfolio_page/441/
+   Contact: Agathe Blandin (agathe.blandin@andromede-ocean.com) / Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) / Jo-Ann Schies (joann.schies@andromede-ocean.com)
+
+3. CHAMILA : Cartographie des habitats en milieux lagunaires
+   Link: https://medtrix.fr/portfolio_page/chamila/
+   Contact: Anaïs Giraud (anais.giraud@eaurmc.fr) / Vincent Ouisse (vincent.ouisse@ifremer.fr)
+
+4. DONIA EXPERT : Cartographie détaillée des habitats marins
+   Link: https://medtrix.fr/portfolio_page/donia-expert/
+   Contact: Agathe Blandin (agathe.blandin@andromede-ocean.com) / Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
+
+CATEGORY: Réseaux de Surveillance
+=================================
+
+5. RECOR : Suivi des assemblages coralligènes en Méditerranée française
+   Link: https://medtrix.fr/portfolio_page/recor/
+   Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) / Julie Deter (julie.deter@andromede-ocean.com)
+
+6. TEMPO : Suivi des herbiers à Posidonie en Méditerranée française
+   Link: https://medtrix.fr/portfolio_page/tempo-2/
+   Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
+
+7. PISCIS : Suivi des assemblages ichtyologiques
+   Link: https://medtrix.fr/portfolio_page/piscis/
+   Contact: Thomas Bockel (thomas.bockel@andromede-ocean.com)
+
+8. SURFSTAT : Analyse surfacique des habitats marins
+   Link: https://medtrix.fr/portfolio_page/surfstat/
+   Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) / Agathe Blandin (agathe.blandin@andromede-ocean.com)
+
+9. RESPIRE : Surveillance du recrutement larvaire en Méditerranée française
+   Link: https://medtrix.fr/portfolio_page/respire/
+   Contact: Amélie FONTCUBERTA (amelie.fontcuberta@ecocean.fr)  / Anais GUDEFIN (anais.gudefin@ecocean.fr)
+
+10. MODEL : Modélisation 3D des habitats marins
+    Link: https://medtrix.fr/portfolio_page/model/
+    Contact: Guilhem Marre (guilhem.marre@andromede-ocean.com)
+
+11. ROMPOM : Réseau d'Observation Méditerranéen des Polluants par les Oiseaux Marins
+    Link: https://medtrix.fr/portfolio_page/rompom/
+    Contact: Eva Tankovic (e.tankovic@initiative-pim.org)
+
+12. SIRENHA : SuivI des REssources Naturelles Halieutiques par Acoustique
+    Link: https://medtrix.fr/portfolio_page/sirenha/
+    Contact: Claire NOEL, noel@semantic-ts.fr
+
+13. Sédiments : Caractérisation sédimentologique du littoral de la Corse
+    Link: https://medtrix.fr/portfolio_page/ose-med/
+    Contact: Cathy-Anna VALENTINI (CathyAnna.VALENTINIPOIRIER@eaurmc.fr)
+
+14. RESCOR : Réseau de surveillance des coraux en Méditerranée
+    Link:  https://medtrix.fr/portfolio_page/restau-med/
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) / Pierre Boissery (pierre.boissery@eaurmc.fr) 
+
+15. CALME : Caractérisation Acoustique du Littoral Méditerranéen et de ses Ecosystèmes
+    Link: https://medtrix.fr/portfolio_page/calme/
+    Contact: Julie Lossent (julie.lossent@chorusacoustics.com)
+
+16. CALOR : Suivi de la température en Méditerranée française
+    Link: https://medtrix.fr/portfolio_page/calor/
+    Contact: Guilhem Marre (guilhem.marre@andromede-ocean.com)
+
+17. CETAMED : Surveillance chimique de la chaîne trophique basée sur les échouages de mammifères marins
+    Link: https://medtrix.fr/portfolio_page/cetamed/
+    Contact: Dr Frank Dhermain (GECEM) / Dr Emmanuel Wafo (emmanuel.wafo@univ-amu.fr)
+
+18. CHIMIE-Med : Caractérisation de la pollution des eaux côtières en Méditerranée française
+    Link: https://medtrix.fr/portfolio_page/chimie-med/
+    Contact: Pierre Boissery (pierre.boissery@eaurmc.fr)  et Marc Bouchoucha (Marc.Bouchoucha@ifremer.fr)
+
+19. FILAM'ED : Suivi des algues filamenteuses en Méditerranée française
+    Link: https://medtrix.fr/portfolio_page/filamed/
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
+
+20. FORAMED : Étude des foraminifères benthiques en Méditerranée française
+    Link: https://medtrix.fr/portfolio_page/foramed/
+    Contact: Christine BARRAS (christine.barras@univ-angers.fr) et Frans JORISSEN (frans.jorissen@univ-angers.fr)
+
+21. MEDHAB : Evaluation et gestion des habitats essentiels des poissons méditerranéens
+    Link: https://medtrix.fr/portfolio_page/medhab/
+    Contact: Adrien Cheminée adrien.cheminee@septentrion-env.com et Justine Richaume justine.richaume@septentrion-env.com
+
+22. eREF
+    Link: https://medtrix.fr/portfolio_page/expeditions-scientifiques/
+    Contact: Julie Deter (julie.deter@andromede-ocean.com)
+
+CATEGORY: Observatoires et sites ateliers
+=========================================
+
+23. OBSLAG : Observatoire des lagunes méditerranéennes
+    Link: https://medtrix.fr/portfolio_page/obslag/
+    Contact: Anaïs Giraud (anais.giraud@eaurmc.fr) / Dominique Munaron (dominique.munaron@ifremer.fr) / Valérie Derolez (Valerie.Derolez@ifremer.fr)
+
+24. OSE-MED : Observatoire des Sédiments en Méditerranée
+    Link: https://medtrix.fr/portfolio_page/ose-med/
+    Contact: Cathy-Anna VALENTINI (CathyAnna.VALENTINIPOIRIER@eaurmc.fr)
+
+25. STARE-CAPMED : Station of Reference and rEsearch on Change of local and global Anthropogenic Pressures on Mediterranean Ecosystems Drifts
+    Link: https://medtrix.fr/portfolio_page/stare-capmed/
+    Contact: Lovina Fullgrabe (l.fullgrabe@stareso.corsica)
+
+26. MAGMA : Observatoire par planeur sous-marin
+    Link: https://medtrix.fr/portfolio_page/magma/
+    Contact: Laurent BEGUERY (lbeguery@alseamar-alcen.com)
+
+27. MEDOBS : Observatoire aérien des usages en Méditerranée française
+    Link: https://medtrix.fr/portfolio_page/medobs/
+    Contact: Cédric Soriano – ops@airattack.f  Et Pierre Boissery –  pierre.boissery@eaurmc.fr
+
+28. MER-VEILLE : Observatoire des espèces et des paysages marins
+    Link: https://medtrix.fr/portfolio_page/mer-veille/
+    Contact: Gwenaëlle Delaruelle gwenaelle.delaruelle@andromede-ocean.com
+
+29. NADOR : Observatoire de la Lagune de Marchica (MAROC)
+    Link: https://medtrix.fr/portfolio_page/nador/
+    Contact: Hocein Bazairi (hoceinbazairi@yahoo.fr)
+
+30. OBLADES : Observatoire sur la Baie de la Ciotat des espèces sous-marines
+    Link: https://medtrix.fr/portfolio_page/oblades/
+    Contact: Thierry Aune, tizaplouf@gmail.com
+
+CATEGORY: État des eaux côtières et de transition
+=================================================
+
+31. CARLIT : Évaluation de l'état écologique du littoral rocheux méditerranéen français
+    Link: https://medtrix.fr/portfolio_page/carlit/
+    Contact: Aurélie Blanfuné (aurelie.blanfune-thibaut@univ-amu.fr) et Thierry Thibaut (thierry.thibaut@univ-amu.fr)
+
+32. LAGMED : Réseau de surveillance des lagunes méditerranéennes
+    Link: https://medtrix.fr/portfolio_page/lagmed/
+    Contact: Anaïs Giraud (anais.giraud@eaurmc.fr) / Nicolas CIMITERRA (Nicolas.Cimiterra@ifremer.fr) / Dominique MUNARON (dominique.munaron@ifremer.fr) / Olivier Boutron (boutron@tourduvalat.org)
+
+33. Atlas de synthèse - Surveillance biologique et Qualité des eaux de Méditerranée
+    Link: https://medtrix.fr/portfolio_page/6282/
+    Contact: Gwenaëlle Delaruelle ( gwenaelle.delaruelle@andromede-ocean.com ) & Pierre Boissery ( pierre.boissery@eaurmc.fr ).
+
+34. LITTOMED : Suivi de la qualité des eaux côtières en Méditerranée française
+    Link: https://medtrix.fr/portfolio_page/littomed/
+    Contact: Pierre Boissery  (Pierre.BOISSERY@eaurmc.fr)
+
+CATEGORY: Gestion côtière
+=========================
+
+35. Suivi du mouillage
+    Link: https://medtrix.fr/portfolio_page/mouillage/
+    Contact: Florian Holon (florian.holon@andromede-ocean.com) / Thomas Bockel (thomas.bockel@andromede-ocean.com)
+
+36. Typologie des outils de gestion de l'espace littoral et marin
+    Link: https://medtrix.fr/portfolio_page/togelm/
+    Contact: SAGE, contrats de milieu : Pierre.BOISSERY@eaurmc.fr;  –  Aires marines protégées : frederic.villers@ofb.gouv.fr
+
+37. Initiative PIM : Petites Iles de Méditerranée
+    Link: https://medtrix.fr/portfolio_page/pim/
+    Contact: Eva Tankovic (e.tankovic@initiative-pim.org)
+
+38. Portail Halieutique Méditerranéen - Réglementation de la pêche
+    Link: https://medtrix.fr/portfolio_page/pamm/
+    Contact: François VIREVIALLE (francois.virevialle@mer.gouv.fr)
+
+CATEGORY: Expéditions scientifiques
+==================================
+
+39. Expéditions scientifiques - Présentation des résultats des différentes expéditions
+    Link: https://medtrix.fr/portfolio_page/expeditions-scientifiques/
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
+
+40. STERE 2024
+    Link: N/A
+    Contact: N/A
+
+CATEGORY: Restauration écologique
+=================================
+
+41. RESTAU-MED : Restauration écologique en zone côtière Méditerranéenne
+    Link: https://medtrix.fr/portfolio_page/restau-med/
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) et Pierre Boissery (Pierre.BOISSERY@eaurmc.fr)
+
+42. SULUBAAI
+    Link: N/A
+    Contact: Guilhem Marre (guilhem.marre@andromede-ocean.com)
+
+CATEGORY: Sciences participatives
+================================
+
+43. Sciences participatives - Projet participatif
+    Link: https://medtrix.fr/portfolio_page/sciences-participatives/
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
+
+44. MEDOBS-SUB/OLPAC-MED : Observatoires citoyens des usages et pressions en mer
+    Link: N/A
+    Contact: CPIE Côte Provençale, Association Aqua Passion
+
+INSTRUCTIONS:
+=============
+1. Fill in the actual project links and contact information
+2. Use format: "Link: https://example.com" and "Contact: email@example.com or phone number"
+3. Return this file with the updated information
+4. I'll then apply all the links and contacts to the HTML
+
+NOTES:
+- Some projects might not have public websites
+- Contact info can be email, phone, or organization contact
+- If no link/contact available, mark as "N/A" 

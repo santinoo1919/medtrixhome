@@ -37,8 +37,8 @@
             </p>
           </div>
           <div class="modal-header-buttons">
-            <button class="btn btn-primary">Build Own Map</button>
-            <button class="btn btn-secondary">Key Metrics</button>
+            <button class="btn btn-primary">Carte personnalisée</button>
+            <button class="btn btn-secondary">Chiffres-clés</button>
           </div>
         </div>
 
@@ -66,24 +66,7 @@
               <div class="category-group">
                 <input type="radio" name="category" id="all" checked />
                 <label for="all" class="category-label">
-                  <span class="category-icon">🗺️</span>
-                  All Maps
-                </label>
-              </div>
-
-              <div class="category-group">
-                <input type="radio" name="category" id="marine-ecology" />
-                <label for="marine-ecology" class="category-label">
-                  <span class="category-icon">🌊</span>
-                  Marine Ecology
-                </label>
-              </div>
-
-              <div class="category-group">
-                <input type="radio" name="category" id="fisheries-regulation" />
-                <label for="fisheries-regulation" class="category-label">
-                  <span class="category-icon">🎣</span>
-                  Fisheries & Regulation
+                  Toutes les cartes
                 </label>
               </div>
 
@@ -91,27 +74,10 @@
                 <input
                   type="radio"
                   name="category"
-                  id="conservation-management"
+                  id="cartographie-des-habitats"
                 />
-                <label for="conservation-management" class="category-label">
-                  <span class="category-icon">🔄</span>
-                  Conservation & Management
-                </label>
-              </div>
-
-              <div class="category-group">
-                <input type="radio" name="category" id="monitoring-research" />
-                <label for="monitoring-research" class="category-label">
-                  <span class="category-icon">🔬</span>
-                  Monitoring & Research
-                </label>
-              </div>
-
-              <div class="category-group">
-                <input type="radio" name="category" id="tools-management" />
-                <label for="tools-management" class="category-label">
-                  <span class="category-icon">🛠️</span>
-                  Tools & Management
+                <label for="cartographie-des-habitats" class="category-label">
+                  Cartographie des habitats
                 </label>
               </div>
 
@@ -119,11 +85,78 @@
                 <input
                   type="radio"
                   name="category"
-                  id="conservation-projects"
+                  id="etat-des-eaux-cotieres-et-de-transition"
                 />
-                <label for="conservation-projects" class="category-label">
-                  <span class="category-icon">🌿</span>
-                  Conservation Projects
+                <label
+                  for="etat-des-eaux-cotieres-et-de-transition"
+                  class="category-label"
+                >
+                  État des eaux côtières et de transition
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input
+                  type="radio"
+                  name="category"
+                  id="expeditions-scientifiques"
+                />
+                <label for="expeditions-scientifiques" class="category-label">
+                  Expéditions scientifiques
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input type="radio" name="category" id="gestion-cotiere" />
+                <label for="gestion-cotiere" class="category-label">
+                  Gestion côtière
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input
+                  type="radio"
+                  name="category"
+                  id="observatoires-et-sites-ateliers"
+                />
+                <label
+                  for="observatoires-et-sites-ateliers"
+                  class="category-label"
+                >
+                  Observatoires et sites ateliers
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input
+                  type="radio"
+                  name="category"
+                  id="reseaux-de-surveillance"
+                />
+                <label for="reseaux-de-surveillance" class="category-label">
+                  Réseaux de Surveillance
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input
+                  type="radio"
+                  name="category"
+                  id="restauration-ecologique"
+                />
+                <label for="restauration-ecologique" class="category-label">
+                  Restauration écologique
+                </label>
+              </div>
+
+              <div class="category-group">
+                <input
+                  type="radio"
+                  name="category"
+                  id="sciences-participatives"
+                />
+                <label for="sciences-participatives" class="category-label">
+                  Sciences participatives
                 </label>
               </div>
             </nav>
@@ -133,7 +166,7 @@
           <main class="main-content">
             <div class="maps-grid">
               <!-- Marine Ecology Maps -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -152,7 +185,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/impact/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="impact-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -161,7 +198,7 @@
               </div>
 
               <!-- RECOR Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -181,7 +218,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/recor/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="recor-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -190,7 +231,7 @@
               </div>
 
               <!-- TEMPO Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -210,7 +251,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/tempo-2/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="tempo-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -219,7 +264,7 @@
               </div>
 
               <!-- PISCIS Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -236,7 +281,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/piscis/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="piscis-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -245,7 +294,7 @@
               </div>
 
               <!-- SURFSTAT Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -262,7 +311,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/surfstat/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="surfstat-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -271,7 +324,7 @@
               </div>
 
               <!-- DONIA Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="cartographie-des-habitats">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -288,7 +341,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/441/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="donia-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -297,7 +354,7 @@
               </div>
 
               <!-- RESPIRE Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -315,7 +372,11 @@
                   </h4>
                   <div class="map-description">Sources: ECOCEAN</div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/respire/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="respiire-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -324,7 +385,10 @@
               </div>
 
               <!-- CARLIT Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div
+                class="map-card"
+                data-category="etat-des-eaux-cotieres-et-de-transition"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -344,7 +408,11 @@
                     Sources: Institut Méditerranéen d'Océanologie (MIO)
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/carlit/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="carlit-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -353,7 +421,7 @@
               </div>
 
               <!-- MODEL Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -370,7 +438,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/model/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="model-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -379,7 +451,7 @@
               </div>
 
               <!-- ROMPOM Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -399,7 +471,11 @@
                     Sources: Initiative pour les Petites Iles de Méditerranée
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/rompom/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="rompom-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -408,7 +484,7 @@
               </div>
 
               <!-- SIRENHA Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -426,7 +502,11 @@
                   </h4>
                   <div class="map-description">Sources: SEMANTIC</div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/sirenha/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="sirenha-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -435,7 +515,7 @@
               </div>
 
               <!-- Sédiments Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -455,7 +535,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/ose-med/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="sediments-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -464,7 +548,10 @@
               </div>
 
               <!-- OBSLAG Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div
+                class="map-card"
+                data-category="observatoires-et-sites-ateliers"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -481,7 +568,11 @@
                     Sources: Agence de l'eau Rhône Méditerranée et Corse
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/obslag/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="obslag-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -490,7 +581,10 @@
               </div>
 
               <!-- OSE-MED Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div
+                class="map-card"
+                data-category="observatoires-et-sites-ateliers"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -507,7 +601,11 @@
                     Sources: Agence de l'eau Rhône Méditerranée et Corse
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/ose-med/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="ose-med-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -516,7 +614,7 @@
               </div>
 
               <!-- RESCOR Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -535,7 +633,11 @@
                     Sources: Agence de l'eau Rhône Méditerranée et Corse
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/restau-med/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="rescor-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -544,7 +646,10 @@
               </div>
 
               <!-- LAGMED Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div
+                class="map-card"
+                data-category="etat-des-eaux-cotieres-et-de-transition"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -563,7 +668,11 @@
                     Sources: Agence de l'eau Rhône Méditerranée et Corse
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/lagmed/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="lagmed-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -572,7 +681,7 @@
               </div>
 
               <!-- RESTAU-MED Map Card -->
-              <div class="map-card" data-category="conservation-management">
+              <div class="map-card" data-category="restauration-ecologique">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -593,7 +702,11 @@
                     Méditerranée Corse
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/restau-med/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="restau-med-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -602,7 +715,10 @@
               </div>
 
               <!-- Atlas de synthèse Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div
+                class="map-card"
+                data-category="etat-des-eaux-cotieres-et-de-transition"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -623,7 +739,11 @@
                     Méditerranée et Corse
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/6282/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="atlas-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -632,7 +752,7 @@
               </div>
 
               <!-- Expéditions scientifiques Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="expeditions-scientifiques">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -652,7 +772,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/expeditions-scientifiques/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="expeditions-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -661,7 +785,7 @@
               </div>
 
               <!-- CALME Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -681,7 +805,11 @@
                     Sources: CHORUS Fondation Grenoble INP et Alseamar
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/calme/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="calme-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -690,7 +818,7 @@
               </div>
 
               <!-- CALOR Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -709,7 +837,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/calor/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="calor-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -718,7 +850,7 @@
               </div>
 
               <!-- CETAMED Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -739,16 +871,114 @@
                     des Cétacés de Méditerranée (GECEM)
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/cetamed/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="cetamed-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
                   </div>
                 </div>
               </div>
+              <input
+                type="radio"
+                name="sidebar-toggle"
+                id="cetamed-sidebar-toggle"
+                class="sidebar-toggle"
+              />
+              <div class="info-sidebar cetamed-sidebar">
+                <div class="info-header">
+                  <h3>CETAMED</h3>
+                  <label for="none-sidebar-toggle" class="close-btn">×</label>
+                </div>
+                <div class="info-content">
+                  <div class="info-section description">
+                    <h4>Description</h4>
+                    <p>
+                      Depuis de nombreuses années, les cétacés s'échouent
+                      régulièrement sur nos côtes. De nombreux polluants
+                      prioritaires, tels que les polychlorobiphényles (PCB),
+                      pesticides, hydrocarbures aromatiques polycycliques (HAP),
+                      métaux…, de par leurs teneurs, sont largement suspectés de
+                      contribuer à ces échouages. En effet, les tissus et
+                      organes contiennent très souvent de fortes concentrations
+                      de ces polluants. Des études sur les teneurs en polluants
+                      dans les organismes des mammifères marins sont réalisées
+                      depuis 2001 par le Laboratoire de Chimie Analytique de la
+                      Faculté de Pharmacie de Marseille. L'objectif actuel vise
+                      à récupérer les prélèvements, juste après un échouage, et
+                      à procéder aux analyses des contaminants. De cette
+                      manière, une évaluation de la tendance réelle des teneurs,
+                      organisme par organisme, est rendue possible à la fin de
+                      chaque année. Les échouages de mammifères marins sur le
+                      littoral français font l'objet d'un suivi continu depuis
+                      1972 par le Réseau National d'Echouages (RNE), coordonné
+                      par l'Observatoire Pelagis (Unité Mixte de Service 3462,
+                      Université de La Rochelle-CNRS, anciennement 'Centre de
+                      Recherches sur les Mammifères Marins'). Au sein de ce
+                      réseau, le suivi méditerranéen est coordonné par le Groupe
+                      d'Etude des Cétacés de Méditerranée (GECEM, dirigé par le
+                      Dr Frank Dhermain), qui en a reçu la délégation officielle
+                      en 2000. Tous les signalements d'échouages de cétacés sur
+                      les côtes méditerranéennes françaises sont en général pris
+                      en compte : animal retrouvé échoué à terre ou sur le
+                      liseré côtier, vivant ou mort, captures accidentelles,
+                      etc. L'intervention sur un dauphin échoué comprend
+                      premièrement l'identification et les mensurations de
+                      l'animal. Le sexe, l'état de fraîcheur de la carcasse et
+                      la présence des lésions évidentes (indices de capture,
+                      collision, morsures…) sont systématiquement renseignés,
+                      ainsi que le lieu précis d'échouage et la date de la
+                      découverte. Le second rôle du RNE est de réaliser des
+                      prélèvements de tissus et organes à des fins d'études
+                      scientifiques. L'échantillonnage est réalisé selon le
+                      protocole standard recommandé par le CRMM (Protocole de
+                      dissection et niveaux d'échantillonnage, crmm@univ-lr.fr).
+                      Les prélèvements portent généralement sur la peau, lard,
+                      muscle, poumon, foie, rein. Ils sont conservés en double à
+                      -18°C pour d'autres recherches ultérieures. Les analyses
+                      de contaminants (PCB, Pesticides, HAP, Métaux) sont
+                      ensuite réalisées par le Laboratoire de Chimie Analytique
+                      de la Faculté de Pharmacie de Marseille, ainsi que
+                      d'autres laboratoires partenaires, dans le cadre de
+                      projets de recherche scientifique.
+                    </p>
+                  </div>
+                  <div class="info-section">
+                    <h4>Sources</h4>
+                    <p>
+                      Dr Frank Dhermain, coordonnateur du Groupe d'Etude des
+                      Cétacés de Méditerranée (GECEM)
+                    </p>
+                  </div>
+                  <div class="info-section">
+                    <h4>Fréquence</h4>
+                    <p>Tous les trois ans</p>
+                  </div>
+                  <div class="info-section">
+                    <h4>Outils disponibles</h4>
+                    <p>
+                      En cliquant sur les différents sites d'échouage (points
+                      violets), l'utilisateur accède à une fenêtre POP UP avec
+                      les caractéristiques de l'animal échoué, les résultats
+                      d'analyses des contaminants et les informations sur les
+                      causes d'échouage.
+                    </p>
+                  </div>
+                  <div class="info-section">
+                    <h4>Contacts</h4>
+                    <p>
+                      Dr Frank Dhermain (GECEM) / Dr Emmanuel Wafo
+                      (emmanuel.wafo@univ-amu.fr)
+                    </p>
+                  </div>
+                </div>
+              </div>
 
               <!-- CHIMIE-Med Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -769,7 +999,11 @@
                     Nucléaire, WWF, Faculté de pharmacie de Marseille
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/chimie-med/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="chimie-med-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -778,7 +1012,7 @@
               </div>
 
               <!-- FILAM'ED Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -798,7 +1032,11 @@
                     Sources: Andromède Océanologie, BioObs
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/filamed/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="filam-med-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -807,7 +1045,7 @@
               </div>
 
               <!-- FORAMED Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -827,7 +1065,11 @@
                     Sources: LPG-BIAF (UMR CNRS 6112)
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/foramed/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="foramed-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -836,7 +1078,7 @@
               </div>
 
               <!-- MEDHAB Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -854,7 +1096,11 @@
                   </h4>
                   <div class="map-description">Sources: Septentrion</div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/medhab/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="medhab-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -863,7 +1109,10 @@
               </div>
 
               <!-- LITTOMED Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div
+                class="map-card"
+                data-category="etat-des-eaux-cotieres-et-de-transition"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -884,7 +1133,11 @@
                     IFREMER, Andromède Océanologie, STARESO
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/littomed/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="littomed-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -893,7 +1146,10 @@
               </div>
 
               <!-- STARE-CAPMED Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div
+                class="map-card"
+                data-category="observatoires-et-sites-ateliers"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -912,7 +1168,11 @@
                   </h4>
                   <div class="map-description">Sources: STARESO</div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/stare-capmed/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label
                       for="stare-capmed-sidebar-toggle"
                       class="tooltip-icon"
@@ -923,7 +1183,7 @@
               </div>
 
               <!-- Sciences participatives Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="sciences-participatives">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -940,7 +1200,11 @@
                     Sources: Andromède Océanologie, Communauté Donia
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/sciences-participatives/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label
                       for="sciences-participatives-sidebar-toggle"
                       class="tooltip-icon"
@@ -951,7 +1215,7 @@
               </div>
 
               <!-- Mouillage Map Card -->
-              <div class="map-card" data-category="conservation-management">
+              <div class="map-card" data-category="gestion-cotiere">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -968,7 +1232,11 @@
                     Sources: AIS : Marine traffic, Vesselfinder, Aishub
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/mouillage/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="mouillage-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -977,7 +1245,7 @@
               </div>
 
               <!-- Typologie Map Card -->
-              <div class="map-card" data-category="conservation-management">
+              <div class="map-card" data-category="gestion-cotiere">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -998,7 +1266,11 @@
                     Biodiversité
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/togelm/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="typologie-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1007,7 +1279,7 @@
               </div>
 
               <!-- PIM Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="gestion-cotiere">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1025,7 +1297,11 @@
                     Agence de l'eau RMC, SHOM, INSEE
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/pim/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="pim-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1034,7 +1310,7 @@
               </div>
 
               <!-- CHAMILA Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="cartographie-des-habitats">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1054,7 +1330,11 @@
                     Corse
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/chamila/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="chamil-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1063,7 +1343,7 @@
               </div>
 
               <!-- DONIA EXPERT Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="cartographie-des-habitats">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1093,7 +1373,7 @@
               </div>
 
               <!-- Portail Halieutique Map Card -->
-              <div class="map-card" data-category="fisheries-regulation">
+              <div class="map-card" data-category="gestion-cotiere">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1113,7 +1393,11 @@
                     Sources: Journal officiel de la République Française (JORF)
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/pamm/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label
                       for="portail-halieutique-sidebar-toggle"
                       class="tooltip-icon"
@@ -1124,7 +1408,10 @@
               </div>
 
               <!-- MAGMA Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div
+                class="map-card"
+                data-category="observatoires-et-sites-ateliers"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1139,7 +1426,11 @@
                   <h4>MAGMA : Observatoire par planeur sous-marin</h4>
                   <div class="map-description">Sources: Alseamar, Chorus</div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/magma/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="magma-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1148,7 +1439,10 @@
               </div>
 
               <!-- MEDOBS Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div
+                class="map-card"
+                data-category="observatoires-et-sites-ateliers"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1168,7 +1462,11 @@
                     Sources: Air Attack Technologies
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/medobs/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="medobs-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1177,7 +1475,7 @@
               </div>
 
               <!-- MEDOBS-SUB Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="sciences-participatives">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1196,11 +1494,22 @@
                   <div class="map-description">
                     Sources: CPIE Côte Provençale, Association Aqua Passion
                   </div>
+                  <div class="map-meta">
+                    <a href="#" class="map-project-link"
+                      >Information à venir ↗</a
+                    >
+                    <label for="medobs-sub-sidebar-toggle" class="tooltip-icon"
+                      >ℹ️</label
+                    >
+                  </div>
                 </div>
               </div>
 
               <!-- MER-VEILLE Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div
+                class="map-card"
+                data-category="observatoires-et-sites-ateliers"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1219,7 +1528,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/mer-veille/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="mer-veille-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1228,7 +1541,10 @@
               </div>
 
               <!-- NADOR Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div
+                class="map-card"
+                data-category="observatoires-et-sites-ateliers"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1245,7 +1561,11 @@
                     Sources: INRH et Université Mohammed V de Rabat
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/nador/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="nador-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1254,7 +1574,10 @@
               </div>
 
               <!-- OBLADES Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div
+                class="map-card"
+                data-category="observatoires-et-sites-ateliers"
+              >
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1272,7 +1595,11 @@
                   </h4>
                   <div class="map-description">Sources: GPES</div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/oblades/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="oblades-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1281,7 +1608,7 @@
               </div>
 
               <!-- STERE 2024 Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="expeditions-scientifiques">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1298,7 +1625,9 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a href="#" class="map-project-link"
+                      >Information à venir ↗</a
+                    >
                     <label for="stere-2024-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1307,7 +1636,7 @@
               </div>
 
               <!-- SULUBAAI Map Card -->
-              <div class="map-card" data-category="marine-ecology">
+              <div class="map-card" data-category="cartographie-des-habitats">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1324,7 +1653,9 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a href="#" class="map-project-link"
+                      >Information à venir ↗</a
+                    >
                     <label for="sulubaa-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1333,7 +1664,7 @@
               </div>
 
               <!-- eREF Map Card -->
-              <div class="map-card" data-category="monitoring-research">
+              <div class="map-card" data-category="reseaux-de-surveillance">
                 <div class="map-preview">
                   <div class="map-image"></div>
                   <div class="map-overlay">
@@ -1350,7 +1681,11 @@
                     Sources: Andromède Océanologie
                   </div>
                   <div class="map-meta">
-                    <a href="#" class="map-project-link">Voir projet ↗</a>
+                    <a
+                      href="https://medtrix.fr/portfolio_page/expeditions-scientifiques/"
+                      class="map-project-link"
+                      >Voir projet ↗</a
+                    >
                     <label for="eref-sidebar-toggle" class="tooltip-icon"
                       >ℹ️</label
                     >
@@ -1521,30 +1856,11 @@
               id="stere-2024-sidebar-toggle"
               class="sidebar-toggle"
             />
-            <input
-              type="radio"
-              name="sidebar-toggle"
-              id="sulubaa-sidebar-toggle"
-              class="sidebar-toggle"
-            />
-            <input
-              type="radio"
-              name="sidebar-toggle"
-              id="eref-sidebar-toggle"
-              class="sidebar-toggle"
-            />
-
             <!-- Missing radio buttons for cards that have tooltips but no radios -->
             <input
               type="radio"
               name="sidebar-toggle"
               id="calor-sidebar-toggle"
-              class="sidebar-toggle"
-            />
-            <input
-              type="radio"
-              name="sidebar-toggle"
-              id="cetamed-sidebar-toggle"
               class="sidebar-toggle"
             />
             <input
@@ -1747,8 +2063,8 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Andromède Océanologie<br />Agence de l'eau Rhône
-                    Méditerranée et Corse
+                    Thomas Bockel (thomas.bockel@andromede-ocean.com) / Florian
+                    Holon (florian.holon@andromede-ocean.com)
                   </p>
                 </div>
               </div>
@@ -1837,10 +2153,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>
-                    Andromède Océanologie<br />Agence de l'eau Rhône
-                    Méditerranée et Corse et OSU-OREME
-                  </p>
+                  <p>Gwenaëlle Delaruelle / Julie Deter</p>
                 </div>
               </div>
             </div>
@@ -1975,8 +2288,8 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Andromède Océanologie<br />Agence de l'eau Rhône
-                    Méditerranée et Corse
+                    Gwenaëlle Delaruelle
+                    (gwenaelle.delaruelle@andromede-ocean.com)
                   </p>
                 </div>
               </div>
@@ -2051,10 +2364,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>
-                    Andromède Océanologie<br />Agence de l'eau Rhône
-                    Méditerranée et Corse, BioObs
-                  </p>
+                  <p>Thomas Bockel (thomas.bockel@andromede-ocean.com)</p>
                 </div>
               </div>
             </div>
@@ -2151,8 +2461,9 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Andromède Océanologie<br />Agence de l'eau Rhône
-                    Méditerranée et Corse
+                    Gwenaëlle Delaruelle
+                    (gwenaelle.delaruelle@andromede-ocean.com) / Agathe Blandin
+                    (agathe.blandin@andromede-ocean.com)
                   </p>
                 </div>
               </div>
@@ -2204,8 +2515,10 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Andromède Océanologie<br />Agence de l'eau Rhône
-                    Méditerranée et Corse, NAOS
+                    Agathe Blandin (agathe.blandin@andromede-ocean.com) /
+                    Gwenaëlle Delaruelle
+                    (gwenaelle.delaruelle@andromede-ocean.com) / Jo-Ann Schies
+                    (joann.schies@andromede-ocean.com)
                   </p>
                 </div>
               </div>
@@ -2358,7 +2671,8 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    ECOCEAN<br />Agence de l'eau Rhône Méditerranée et Corse
+                    Amélie FONTCUBERTA (amelie.fontcuberta@ecocean.fr) / Anais
+                    GUDEFIN (anais.gudefin@ecocean.fr)
                   </p>
                 </div>
               </div>
@@ -2447,8 +2761,8 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Institut Méditerranéen d'Océanologie (MIO)<br />Agence de
-                    l'eau Rhône Méditerranée et Corse
+                    Anaïs Giraud (anais.giraud@eaurmc.fr) / Vincent Ouisse
+                    (vincent.ouisse@ifremer.fr)
                   </p>
                 </div>
               </div>
@@ -2514,7 +2828,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Andromède Océanologie<br />contact@andromede-ocean.com</p>
+                  <p>Guilhem Marre (guilhem.marre@andromede-ocean.com)</p>
                 </div>
               </div>
             </div>
@@ -2598,9 +2912,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>
-                    Initiative pour les Petites Iles de Méditerranée<br />contact@pim-initiative.org
-                  </p>
+                  <p>Eva Tankovic (e.tankovic@initiative-pim.org)</p>
                 </div>
               </div>
             </div>
@@ -2672,7 +2984,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>SEMANTIC<br />contact@semantic.fr</p>
+                  <p>Claire NOEL, noel@semantic-ts.fr</p>
                 </div>
               </div>
             </div>
@@ -2733,7 +3045,9 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Andromède Océanologie<br />contact@andromede-ocean.com</p>
+                  <p>
+                    Cathy-Anna VALENTINI (CathyAnna.VALENTINIPOIRIER@eaurmc.fr)
+                  </p>
                 </div>
               </div>
             </div>
@@ -2822,8 +3136,9 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Agence de l'eau Rhône Méditerranée et Corse, IFREMER, Tour
-                    du Valat
+                    Anaïs Giraud (anais.giraud@eaurmc.fr) / Dominique Munaron
+                    (dominique.munaron@ifremer.fr) / Valérie Derolez
+                    (Valerie.Derolez@ifremer.fr)
                   </p>
                 </div>
               </div>
@@ -2858,7 +3173,7 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Agence de l'eau Rhône Méditerranée et Corse<br />contact@eaurmc.fr
+                    Cathy-Anna VALENTINI (CathyAnna.VALENTINIPOIRIER@eaurmc.fr)
                   </p>
                 </div>
               </div>
@@ -2893,7 +3208,9 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Agence de l'eau Rhône Méditerranée et Corse<br />contact@eaurmc.fr
+                    Gwenaëlle Delaruelle
+                    (gwenaelle.delaruelle@andromede-ocean.com) / Pierre Boissery
+                    (pierre.boissery@eaurmc.fr)
                   </p>
                 </div>
               </div>
@@ -2928,7 +3245,10 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Agence de l'eau Rhône Méditerranée et Corse<br />contact@eaurmc.fr
+                    Anaïs Giraud (anais.giraud@eaurmc.fr) / Nicolas CIMITERRA
+                    (Nicolas.Cimiterra@ifremer.fr) / Dominique MUNARON
+                    (dominique.munaron@ifremer.fr) / Olivier Boutron
+                    (boutron@tourduvalat.org)
                   </p>
                 </div>
               </div>
@@ -2965,7 +3285,11 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Andromède Océanologie<br />contact@andromede-ocean.com</p>
+                  <p>
+                    Gwenaëlle Delaruelle
+                    (gwenaelle.delaruelle@andromede-ocean.com) et Pierre
+                    Boissery (Pierre.BOISSERY@eaurmc.fr)
+                  </p>
                 </div>
               </div>
             </div>
@@ -3003,7 +3327,11 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Andromède Océanologie<br />contact@andromede-ocean.com</p>
+                  <p>
+                    Gwenaëlle Delaruelle (
+                    gwenaelle.delaruelle@andromede-ocean.com ) & Pierre Boissery
+                    ( pierre.boissery@eaurmc.fr )
+                  </p>
                 </div>
               </div>
             </div>
@@ -3036,7 +3364,10 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Andromède Océanologie<br />contact@andromede-ocean.com</p>
+                  <p>
+                    Gwenaëlle Delaruelle
+                    (gwenaelle.delaruelle@andromede-ocean.com)
+                  </p>
                 </div>
               </div>
             </div>
@@ -3072,7 +3403,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>CHORUS Fondation Grenoble INP<br />contact@chorus.fr</p>
+                  <p>Julie Lossent (julie.lossent@chorusacoustics.com)</p>
                 </div>
               </div>
             </div>
@@ -3087,6 +3418,12 @@
                   <h4>Description</h4>
                   <p>Informations à venir.</p>
                 </div>
+                <div class="info-section">
+                  <h4>Contacts</h4>
+                  <p>
+                    Gwenaëlle Delaruelle<br />gwenaelle.delaruelle@andromede-ocean.com
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -3099,6 +3436,10 @@
                 <div class="info-section description">
                   <h4>Description</h4>
                   <p>Informations à venir.</p>
+                </div>
+                <div class="info-section">
+                  <h4>Contacts</h4>
+                  <p>Hocein Bazairi (hoceinbazairi@yahoo.fr)</p>
                 </div>
               </div>
             </div>
@@ -3178,38 +3519,11 @@
                     octobre sur trois sites: • Le port de plaisance : dans 9
                     unités d'observation • Une digue : sur 3 transects de 10m •
                     Au Mugel : sur 3 transects de 20m Poissons adultes et
-                    coralligène : La présence et la quantité de certains
-                    poissons parvenus à l'âge adulte témoigne de la vitalité des
-                    écosystèmes. Il est entendu que le GPES réalise un comptage
-                    des poissons adultes sur des sites à coralligène, sur des
-                    herbiers et sur les récifs artificiels au large de
-                    Saint-Cyr. Le protocole identifie 25 espèces à relever sur
-                    ces sites, selon les méthodes du transect et du quadrat.
-                  </p>
-                </div>
-                <div class="info-section">
-                  <h4>Sources</h4>
-                  <p>GPES</p>
-                </div>
-                <div class="info-section">
-                  <h4>Fréquence</h4>
-                  <p>Mensuelle</p>
-                </div>
-                <div class="info-section">
-                  <h4>Outils disponibles</h4>
-                  <p>
-                    En cliquant sur les différents sites, l'utilisateur accède à
-                    une fenêtre POP UP avec les caractéristiques principales du
-                    site, les espèces observées, ainsi que leur nombre et des
-                    informations sur la profondeur des sites.
                   </p>
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>
-                    GPES<br />Agence de l'eau Rhône Méditerranée et Corse,
-                    Université de Perpignan, Ecocéan, Andromède Océanologie
-                  </p>
+                  <p>Thierry Aune, tizaplouf@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -3222,7 +3536,7 @@
               <div class="info-content">
                 <div class="info-section description">
                   <h4>Description</h4>
-                  <p>Informations à venir.</p>
+                  <p>Projet STERE 2024</p>
                 </div>
               </div>
             </div>
@@ -3235,7 +3549,11 @@
               <div class="info-content">
                 <div class="info-section description">
                   <h4>Description</h4>
-                  <p>Informations à venir.</p>
+                  <p>Projet SULUBAAI</p>
+                </div>
+                <div class="info-section">
+                  <h4>Contacts</h4>
+                  <p>Guilhem Marre (guilhem.marre@andromede-ocean.com)</p>
                 </div>
               </div>
             </div>
@@ -3248,7 +3566,15 @@
               <div class="info-content">
                 <div class="info-section description">
                   <h4>Description</h4>
-                  <p>Informations à venir.</p>
+                  <p>
+                    Ce projet fournit à l'utilisateur la possibilité d'évaluer
+                    l'état de référence de la biodiversité en vertébrés dans les
+                    masses d'eau côtières méditerranéennes.
+                  </p>
+                </div>
+                <div class="info-section">
+                  <h4>Contacts</h4>
+                  <p>Julie Deter (julie.deter@andromede-ocean.com)</p>
                 </div>
               </div>
             </div>
@@ -3312,7 +3638,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Agence de l'eau Rhône Méditerranée et Corse</p>
+                  <p>Guilhem Marre<br />guilhem.marre@andromede-ocean.com</p>
                 </div>
               </div>
             </div>
@@ -3397,7 +3723,10 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Agence de l'eau Rhône Méditerranée et Corse, GECEM</p>
+                  <p>
+                    Dr Frank Dhermain (GECEM) / Dr Emmanuel Wafo
+                    (emmanuel.wafo@univ-amu.fr)
+                  </p>
                 </div>
               </div>
             </div>
@@ -3475,9 +3804,8 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Institut de Radioprotection et de Sûreté Nucléaire, Ifremer,
-                    WWF, Agence de l'eau Rhône Méditerranée et Corse, Faculté de
-                    Pharmacie de Marseille, MOI
+                    Pierre Boissery (pierre.boissery@eaurmc.fr) et Marc
+                    Bouchoucha (Marc.Bouchoucha@ifremer.fr)
                   </p>
                 </div>
               </div>
@@ -3534,7 +3862,9 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Agence de l'eau Rhône Méditerranée et Corse, BioObs</p>
+                  <p>
+                    Gwenaëlle Delaruelle<br />gwenaelle.delaruelle@andromede-ocean.com
+                  </p>
                 </div>
               </div>
             </div>
@@ -3595,7 +3925,10 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Agence de l'eau Rhône Méditerranée et Corse</p>
+                  <p>
+                    Christine BARRAS (christine.barras@univ-angers.fr) et Frans
+                    JORISSEN (frans.jorissen@univ-angers.fr)
+                  </p>
                 </div>
               </div>
             </div>
@@ -3662,12 +3995,8 @@
                 <div class="info-section">
                   <h4>Contacts</h4>
                   <p>
-                    Parc Naturel Marin du Golfe du Lyon, Parc Marin de la Côte
-                    Bleue, Parc National des Calanques, Parc Naturel Régional de
-                    Corse, Réserve Naturelle de Cerbère-Banyuls, Réserve
-                    Naturelle de Scandola, La Stareso, Agence de l'eau Rhône
-                    Méditerranée et Corse, La DIRM, La PAMM, La Région
-                    Occitanie, La Région Sud
+                    Adrien Cheminée adrien.cheminee@septentrion-env.com et
+                    Justine Richaume justine.richaume@septentrion-env.com
                   </p>
                 </div>
               </div>
@@ -3747,10 +4076,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>
-                    Agence de l'eau Rhône Méditerranée et Corse, IFREMER,
-                    Andromède Océanologie, STARESO
-                  </p>
+                  <p>Pierre Boissery (Pierre.BOISSERY@eaurmc.fr)</p>
                 </div>
               </div>
             </div>
@@ -3861,7 +4187,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>STARESO<br />contact@stareso.com</p>
+                  <p>Lovina Fullgrabe (l.fullgrabe@stareso.corsica)</p>
                 </div>
               </div>
             </div>
@@ -3954,7 +4280,10 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Andromède Océanologie<br />contact@andromede-ocean.com</p>
+                  <p>
+                    Gwenaëlle Delaruelle
+                    (gwenaelle.delaruelle@andromede-ocean.com)
+                  </p>
                 </div>
               </div>
             </div>
@@ -4025,7 +4354,10 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Marine Traffic<br />contact@marinetraffic.com</p>
+                  <p>
+                    Florian Holon (florian.holon@andromede-ocean.com) / Thomas
+                    Bockel (thomas.bockel@andromede-ocean.com)
+                  </p>
                 </div>
               </div>
             </div>
@@ -4074,7 +4406,10 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Agence de l'eau<br />contact@eaurmc.fr</p>
+                  <p>
+                    SAGE, contrats de milieu : Pierre.BOISSERY@eaurmc.fr; –
+                    Aires marines protégées : frederic.villers@ofb.gouv.fr
+                  </p>
                 </div>
               </div>
             </div>
@@ -4125,7 +4460,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Initiative PIM<br />contact@pim-initiative.org</p>
+                  <p>Eva Tankovic (e.tankovic@initiative-pim.org)</p>
                 </div>
               </div>
             </div>
@@ -4157,7 +4492,10 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>IFREMER<br />contact@ifremer.fr</p>
+                  <p>
+                    Anaïs Giraud (anais.giraud@eaurmc.fr) / Vincent Ouisse
+                    (vincent.ouisse@ifremer.fr)
+                  </p>
                 </div>
               </div>
             </div>
@@ -4189,7 +4527,11 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Andromède Océanologie<br />contact@andromede-ocean.com</p>
+                  <p>
+                    Agathe Blandin (agathe.blandin@andromede-ocean.com) /
+                    Gwenaëlle Delaruelle
+                    (gwenaelle.delaruelle@andromede-ocean.com)
+                  </p>
                 </div>
               </div>
             </div>
@@ -4221,7 +4563,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>JORF<br />contact@legifrance.gouv.fr</p>
+                  <p>François VIREVIALLE (francois.virevialle@mer.gouv.fr)</p>
                 </div>
               </div>
             </div>
@@ -4253,7 +4595,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Alseamar<br />contact@alseamar.com</p>
+                  <p>Laurent BEGUERY (lbeguery@alseamar-alcen.com)</p>
                 </div>
               </div>
             </div>
@@ -4287,7 +4629,10 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>Air Attack Technologies<br />contact@airattack.com</p>
+                  <p>
+                    Cédric Soriano – ops@airattack.f Et Pierre Boissery –
+                    pierre.boissery@eaurmc.fr
+                  </p>
                 </div>
               </div>
             </div>
@@ -4319,9 +4664,7 @@
                 </div>
                 <div class="info-section">
                   <h4>Contacts</h4>
-                  <p>
-                    CPIE Côte Provençale<br />contact@cpie-coteprovencale.fr
-                  </p>
+                  <p>CPIE Côte Provençale, Association Aqua Passion</p>
                 </div>
               </div>
             </div>

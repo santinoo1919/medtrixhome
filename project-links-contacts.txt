@@ -12,11 +12,11 @@ CATEGORY: Cartographie des habitats
 
 1. IMPACT : Réseau de suivi des pressions anthropiques côtières
    Link: https://medtrix.fr/portfolio_page/impact/
-   Contact: Thomas Bockel (thomas.bockel@andromede-ocean.com) / Florian Holon
+   Contact: Thomas Bockel (thomas.bockel@andromede-ocean.com) / Florian Holon (florian.holon@andromede-ocean.com)
 
 2. DONIA : Naviguer, Ancrer et Protéger
    Link: https://medtrix.fr/portfolio_page/441/
-   Contact: Agathe Blandin/ Gwenaëlle Delaruelle / Jo-Ann Schies
+   Contact: Agathe Blandin (agathe.blandin@andromede-ocean.com) / Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) / Jo-Ann Schies (joann.schies@andromede-ocean.com)
 
 3. CHAMILA : Cartographie des habitats en milieux lagunaires
    Link: https://medtrix.fr/portfolio_page/chamila/
@@ -24,26 +24,26 @@ CATEGORY: Cartographie des habitats
 
 4. DONIA EXPERT : Cartographie détaillée des habitats marins
    Link: https://medtrix.fr/portfolio_page/donia-expert/
-   Contact: Agathe Blandin/ Gwenaëlle Delaruelle
+   Contact: Agathe Blandin (agathe.blandin@andromede-ocean.com) / Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
 
 CATEGORY: Réseaux de Surveillance
 =================================
 
 5. RECOR : Suivi des assemblages coralligènes en Méditerranée française
    Link: https://medtrix.fr/portfolio_page/recor/
-   Contact: Gwenaëlle Delaruelle / Julie Deter
+   Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) / Julie Deter (julie.deter@andromede-ocean.com)
 
 6. TEMPO : Suivi des herbiers à Posidonie en Méditerranée française
    Link: https://medtrix.fr/portfolio_page/tempo-2/
-   Contact: Gwenaëlle Delaruelle
+   Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
 
 7. PISCIS : Suivi des assemblages ichtyologiques
    Link: https://medtrix.fr/portfolio_page/piscis/
-   Contact: Thomas Bockel
+   Contact: Thomas Bockel (thomas.bockel@andromede-ocean.com)
 
 8. SURFSTAT : Analyse surfacique des habitats marins
    Link: https://medtrix.fr/portfolio_page/surfstat/
-   Contact: Gwenaëlle Delaruelle/ Agathe Blandin
+   Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) / Agathe Blandin (agathe.blandin@andromede-ocean.com)
 
 9. RESPIRE : Surveillance du recrutement larvaire en Méditerranée française
    Link: https://medtrix.fr/portfolio_page/respire/
@@ -51,7 +51,7 @@ CATEGORY: Réseaux de Surveillance
 
 10. MODEL : Modélisation 3D des habitats marins
     Link: https://medtrix.fr/portfolio_page/model/
-    Contact: Guilhem Marre
+    Contact: Guilhem Marre (guilhem.marre@andromede-ocean.com)
 
 11. ROMPOM : Réseau d'Observation Méditerranéen des Polluants par les Oiseaux Marins
     Link: https://medtrix.fr/portfolio_page/rompom/
@@ -66,16 +66,16 @@ CATEGORY: Réseaux de Surveillance
     Contact: Cathy-Anna VALENTINI (CathyAnna.VALENTINIPOIRIER@eaurmc.fr)
 
 14. RESCOR : Réseau de surveillance des coraux en Méditerranée
-    Link: N/A
-    Contact: N/A
+    Link:  https://medtrix.fr/portfolio_page/restau-med/
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) / Pierre Boissery (pierre.boissery@eaurmc.fr) 
 
 15. CALME : Caractérisation Acoustique du Littoral Méditerranéen et de ses Ecosystèmes
     Link: https://medtrix.fr/portfolio_page/calme/
-    Contact: N/A
+    Contact: Julie Lossent (julie.lossent@chorusacoustics.com)
 
 16. CALOR : Suivi de la température en Méditerranée française
     Link: https://medtrix.fr/portfolio_page/calor/
-    Contact: Guilhem Marre
+    Contact: Guilhem Marre (guilhem.marre@andromede-ocean.com)
 
 17. CETAMED : Surveillance chimique de la chaîne trophique basée sur les échouages de mammifères marins
     Link: https://medtrix.fr/portfolio_page/cetamed/
@@ -87,7 +87,7 @@ CATEGORY: Réseaux de Surveillance
 
 19. FILAM'ED : Suivi des algues filamenteuses en Méditerranée française
     Link: https://medtrix.fr/portfolio_page/filamed/
-    Contact: Gwenaëlle Delaruelle
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
 
 20. FORAMED : Étude des foraminifères benthiques en Méditerranée française
     Link: https://medtrix.fr/portfolio_page/foramed/
@@ -98,8 +98,8 @@ CATEGORY: Réseaux de Surveillance
     Contact: Adrien Cheminée adrien.cheminee@septentrion-env.com et Justine Richaume justine.richaume@septentrion-env.com
 
 22. eREF
-    Link: N/A
-    Contact: N/A
+    Link: https://medtrix.fr/portfolio_page/expeditions-scientifiques/
+    Contact: Julie Deter (julie.deter@andromede-ocean.com)
 
 CATEGORY: Observatoires et sites ateliers
 =========================================
@@ -126,7 +126,7 @@ CATEGORY: Observatoires et sites ateliers
 
 28. MER-VEILLE : Observatoire des espèces et des paysages marins
     Link: https://medtrix.fr/portfolio_page/mer-veille/
-    Contact: Gwenaëlle Delaruelle
+    Contact: Gwenaëlle Delaruelle gwenaelle.delaruelle@andromede-ocean.com
 
 29. NADOR : Observatoire de la Lagune de Marchica (MAROC)
     Link: https://medtrix.fr/portfolio_page/nador/
@@ -160,7 +160,7 @@ CATEGORY: Gestion côtière
 
 35. Suivi du mouillage
     Link: https://medtrix.fr/portfolio_page/mouillage/
-    Contact: Florian Holon / Thomas Bockel
+    Contact: Florian Holon (florian.holon@andromede-ocean.com) / Thomas Bockel (thomas.bockel@andromede-ocean.com)
 
 36. Typologie des outils de gestion de l'espace littoral et marin
     Link: https://medtrix.fr/portfolio_page/togelm/
@@ -179,7 +179,7 @@ CATEGORY: Expéditions scientifiques
 
 39. Expéditions scientifiques - Présentation des résultats des différentes expéditions
     Link: https://medtrix.fr/portfolio_page/expeditions-scientifiques/
-    Contact: Gwenaëlle Delaruelle
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
 
 40. STERE 2024
     Link: N/A
@@ -190,22 +190,22 @@ CATEGORY: Restauration écologique
 
 41. RESTAU-MED : Restauration écologique en zone côtière Méditerranéenne
     Link: https://medtrix.fr/portfolio_page/restau-med/
-    Contact: Gwenaëlle Delaruelle gwenaelle.delaruelle@andromede-ocean.com et Pierre Boissery
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com) et Pierre Boissery (Pierre.BOISSERY@eaurmc.fr)
 
 42. SULUBAAI
     Link: N/A
-    Contact: N/A
+    Contact: Guilhem Marre (guilhem.marre@andromede-ocean.com)
 
 CATEGORY: Sciences participatives
 ================================
 
 43. Sciences participatives - Projet participatif
     Link: https://medtrix.fr/portfolio_page/sciences-participatives/
-    Contact: Gwenaëlle Delaruelle
+    Contact: Gwenaëlle Delaruelle (gwenaelle.delaruelle@andromede-ocean.com)
 
 44. MEDOBS-SUB/OLPAC-MED : Observatoires citoyens des usages et pressions en mer
     Link: N/A
-    Contact: N/A
+    Contact: CPIE Côte Provençale, Association Aqua Passion
 
 INSTRUCTIONS:
 =============

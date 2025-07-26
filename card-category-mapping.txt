@@ -19,7 +19,7 @@ CURRENT CARDS:
 
 1. IMPACT : Réseau de suivi des pressions anthropiques côtières
    Current: marine-ecology
-   Suggested: cartographie-des-habitats
+   Suggested: reseaux-de-surveillance
 
 2. RECOR : Suivi des assemblages coralligènes en Méditerranée française
    Current: marine-ecology
@@ -187,7 +187,7 @@ CURRENT CARDS:
 
 43. SULUBAAI
     Current: marine-ecology
-    Suggested: restauration-ecologique
+    Suggested: cartographie-des-habitats
 
 44. eREF
     Current: monitoring-research

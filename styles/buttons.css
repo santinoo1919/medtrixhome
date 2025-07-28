@@ -21,13 +21,13 @@
 
 /* Primary Button */
 .btn-primary {
-  background: var(--primary-color);
+  background: var(--primary);
   color: white;
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
-  box-shadow: var(--shadow-medium);
+  background: var(--primary-dark);
+  box-shadow: var(--shadow-md);
 }
 
 /* Secondary Button */
@@ -40,7 +40,7 @@
   background: var(--gray-300);
   color: var(--gray-800);
   border-color: var(--gray-400);
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--shadow-md);
 }
 
 /* Small Button Variant (for overlays) */

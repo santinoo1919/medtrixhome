@@ -77,16 +77,13 @@
      =================================== */
 
   --transition: 0.2s ease;
+  --transition-fast: var(--transition);
 
   /* ===================================
-     LEGACY COMPATIBILITY
+     LEGACY COMPATIBILITY - ONLY ESSENTIAL
      =================================== */
 
-  /* Keep existing variable names for compatibility */
-  --primary-color: var(--primary);
-  --primary-hover: var(--primary-dark);
-  --secondary-color: var(--gray-500);
-  --secondary-hover: var(--gray-600);
+  /* Keep only the variables actually used in other CSS files */
   --text-primary: var(--gray-900);
   --text-secondary: var(--gray-600);
   --text-light: var(--gray-500);
@@ -98,11 +95,10 @@
   --shadow-light: var(--shadow);
   --shadow-medium: var(--shadow-md);
   --shadow-heavy: var(--shadow-lg);
-  --border-radius: var(--radius);
+  --border-radius: var(--radius-md);
   --border-radius-sm: var(--radius-sm);
   --border-radius-md: var(--radius-md);
   --border-radius-lg: var(--radius-lg);
-  --transition-fast: var(--transition);
 }
 
 /* ===================================
@@ -130,87 +126,6 @@ body {
 }
 
 /* ===================================
-   TYPOGRAPHY UTILITIES
-   =================================== */
-
-.text-xs {
-  font-size: var(--text-xs);
-}
-.text-sm {
-  font-size: var(--text-sm);
-}
-.text-base {
-  font-size: var(--text-base);
-}
-.text-lg {
-  font-size: var(--text-lg);
-}
-.text-xl {
-  font-size: var(--text-xl);
-}
-
-.font-normal {
-  font-weight: var(--font-normal);
-}
-.font-medium {
-  font-weight: var(--font-medium);
-}
-.font-semibold {
-  font-weight: var(--font-semibold);
-}
-.font-bold {
-  font-weight: var(--font-bold);
-}
-
-/* ===================================
-   COLOR UTILITIES
-   =================================== */
-
-.text-primary {
-  color: var(--primary);
-}
-.text-gray-500 {
-  color: var(--gray-500);
-}
-.text-gray-600 {
-  color: var(--gray-600);
-}
-.text-gray-900 {
-  color: var(--gray-900);
-}
-
-.bg-gray-50 {
-  background-color: var(--gray-50);
-}
-.bg-gray-100 {
-  background-color: var(--gray-100);
-}
-
-/* ===================================
-   SPACING UTILITIES
-   =================================== */
-
-.p-4 {
-  padding: var(--space-4);
-}
-.p-6 {
-  padding: var(--space-6);
-}
-.p-8 {
-  padding: var(--space-8);
-}
-
-.m-4 {
-  margin: var(--space-4);
-}
-.m-6 {
-  margin: var(--space-6);
-}
-.m-8 {
-  margin: var(--space-8);
-}
-
-/* ===================================
    SCROLLBAR STYLING
    =================================== */
 
@@ -229,90 +144,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
-}
-
-/* ===================================
-   DESIGN SYSTEM DOCUMENTATION
-   =================================== */
-
-.design-system-demo {
-  padding: 0 var(--space-4);
-  margin: var(--space-8) 0;
-}
-
-.design-system-demo .color-palette {
-  background: var(--primary-light);
-  padding: var(--space-4);
-  margin-bottom: var(--space-6);
-  border-radius: var(--radius);
-}
-
-.design-system-demo .color-palette h3 {
-  color: var(--primary-dark);
-  font-size: var(--text-lg);
-  font-weight: var(--font-semibold);
-  margin-bottom: var(--space-2);
-}
-
-.design-system-demo .color-palette p {
-  color: var(--primary-dark);
-  font-size: var(--text-sm);
-}
-
-/* ===================================
-   UTILITY CLASSES
-   =================================== */
-
-.hidden {
-  display: none;
-}
-.block {
-  display: block;
-}
-.flex {
-  display: flex;
-}
-.grid {
-  display: grid;
-}
-
-.items-center {
-  align-items: center;
-}
-.justify-center {
-  justify-content: center;
-}
-.justify-between {
-  justify-content: space-between;
-}
-
-.w-full {
-  width: 100%;
-}
-.h-full {
-  height: 100%;
-}
-
-.rounded {
-  border-radius: var(--radius);
-}
-.rounded-sm {
-  border-radius: var(--radius-sm);
-}
-.rounded-lg {
-  border-radius: var(--radius-lg);
-}
-
-.shadow {
-  box-shadow: var(--shadow);
-}
-.shadow-md {
-  box-shadow: var(--shadow-md);
-}
-.shadow-lg {
-  box-shadow: var(--shadow-lg);
-}
-
-.transition {
-  transition: var(--transition);
 }

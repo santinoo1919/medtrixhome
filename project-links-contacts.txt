@@ -207,6 +207,18 @@ CATEGORY: Sciences participatives
     Link: N/A
     Contact: CPIE Côte Provençale, Association Aqua Passion
 
+45. Métropole Marseille
+    Link: N/A
+    Contact: N/A
+
+46. Mouillage détails
+    Link: N/A
+    Contact: N/A
+
+47. Réglementation du mouillage
+    Link: N/A
+    Contact: N/A
+
 INSTRUCTIONS:
 =============
 1. Fill in the actual project links and contact information

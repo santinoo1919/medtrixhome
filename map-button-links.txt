@@ -1,0 +1,221 @@
+MAP BUTTON LINKS - VOIR CARTE BUTTONS
+========================================
+
+This file contains all the "Voir Carte" button links for each map card.
+These are the overlay buttons that should link to the actual interactive maps.
+
+FORMAT:
+- Project Name: [Map URL] | [Notes]
+
+SORTED BY MEDTRIX PLATFORM ORDER (from medtrix-data.txt)
+=========================================================
+
+1. Access to map builder
+   Map URL: https://plateforme.medtrix.fr/index.php/mapBuilder
+   Notes: Link to interactive map
+
+2. Métropole Marseille
+   Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=metropolemarseille&project=metropole_marseille
+   Notes: Link to interactive map
+
+3. Mouillage détails
+   Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=partenaires&project=mouillages_details
+   Notes: Link to interactive map
+
+4. Réglementation du mouillage
+   Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=reglementation&project=reglementation_mouillage
+   Notes: Link to interactive map
+
+5. RESTAU-MED : Restauration écologique en zone côtière Méditerranéenne
+   Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep06&project=restau-med
+   Notes: Link to interactive map
+
+6. Atlas de synthèse - Surveillance biologique et Qualité des eaux de Méditerranée
+   Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep08&project=ATLAS_2020_2024
+   Notes: Link to interactive map
+
+7. Expéditions scientifiques - Présentation des résultats des différentes expéditions
+   Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep09&project=expeditions
+   Notes: Link to interactive map
+
+8. CALME : Caractérisation Acoustique du Littoral Méditerranéen et de ses Ecosystèmes
+   Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=calme
+   Notes: Link to interactive map
+
+9. CALOR : Suivi de la température en Méditerranée française
+   Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=calor
+   Notes: Link to interactive map
+
+10. CETAMED : Surveillance chimique de la chaîne trophique basée sur les échouages de mammifères marins
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=cetamed
+    Notes: Link to interactive map
+
+11. CHIMIE-Med : Caractérisation de la pollution des eaux côtières en Méditerranée française
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=chimie-med
+    Notes: Link to interactive map
+
+12. FILAM'ED : Suivi des algues filamenteuses en Méditerranée française
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=filamed
+    Notes: Link to interactive map
+
+13. FORAMED : Étude des foraminifères benthiques en Méditerranée française
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=foramed
+    Notes: Link to interactive map
+
+14. MEDHAB : Evaluation et gestion des habitats essentiels des poissons méditerranéens
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=medhab
+    Notes: Link to interactive map
+
+15. MODEL : Application de la photogrammétrie à la surveillance biologique des habitats sous-marins
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=model
+    Notes: Link to interactive map
+
+16. PISCIS : Suivi des assemblages ichtyologiques
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=piscis
+    Notes: Link to interactive map
+
+17. RECOR : Suivi des assemblages coralligènes en Méditerranée française
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=recor
+    Notes: Link to interactive map
+
+18. RESCOR: Restauration du Coralligène à Cap Ferrat près de Nice
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=rescor
+    Notes: Link to interactive map
+
+19. RESPIRE : Surveillance du recrutement larvaire en Méditerranée française
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=respire
+    Notes: Link to interactive map
+
+20. ROMPOM : Réseau d'Observation Méditerranéen des Polluants par les Oiseaux Marins
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=rompom
+    Notes: Link to interactive map
+
+21. Sédiments : Caractérisation sédimentologique du littoral de la Corse
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=sediments_corse
+    Notes: Link to interactive map
+
+22. SIRENHA : SuivI des REssources Naturelles Halieutiques par Acoustique
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=sirenha
+    Notes: Link to interactive map
+
+23. SURFSTAT : Analyse surfacique des habitats marins
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=surfstat
+    Notes: Link to interactive map
+
+24. TEMPO : Suivi des herbiers à Posidonie en Méditerranée française
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep1&project=tempo
+    Notes: Link to interactive map
+
+25. CARLIT : Évaluation de l'état écologique du littoral rocheux méditerranéen français
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep10&project=carlit
+    Notes: Link to interactive map
+
+26. LAGMED : Suivi de la qualité des eaux lagunaires en Méditerranée française
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep10&project=lagmed
+    Notes: Link to interactive map
+
+27. LITTOMED : Suivi de la qualité des eaux côtières en Méditerranée française
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep10&project=littomed
+    Notes: Link to interactive map
+
+28. STARE-CAPMED : STAtion of Reference and rEsearch on Change of local and global Anthropogenic Pressures on Mediterranean Ecosytems Drifs
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep14&project=starecapmed
+    Notes: Link to interactive map
+
+29. IMPACT : Modélisation des pressions anthropiques côtières et des seuils de vulnérabilité
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep17&project=IMPACT
+    Notes: Link to interactive map
+
+30. Projet 'Sciences participatives'
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep18&project=public_sciences_participatives
+    Notes: Link to interactive map
+
+31. Suivi du mouillage
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep2&project=Suivi_Mouillage_AIS
+    Notes: Link to interactive map
+
+32. Typologie des outils de gestion de l'espace littoral et marin
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep2&project=outils_gestion
+    Notes: Link to interactive map
+
+33. Initiative PIM : Petites Iles de Méditerranée
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep2&project=pim
+    Notes: Link to interactive map
+
+34. CHAMILA : Cartographie des habitats en milieux lagunaires
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep3&project=chamila
+    Notes: Link to interactive map
+
+35. DONIA : Naviguer, Ancrer et Protéger
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep3&project=donia
+    Notes: Link to interactive map
+
+36. DONIA EXPERT : Cartographie détaillée des habitats marins
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep3&project=donia-expert
+    Notes: Link to interactive map
+
+37. Portail Halieutique Méditerranéen - Réglementation de la pêche
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep5&project=pamm
+    Notes: Link to interactive map
+
+38. MAGMA : Observatoire par planeur sous-marin
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep7&project=magma
+    Notes: Link to interactive map
+
+39. MEDOBS : Observatoire aérien des usages en Méditerranée française
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep7&project=medobs
+    Notes: Link to interactive map
+
+40. MEDOBS-SUB/OLPAC-MED : Observatoires citoyens des usages et pressions en mer
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep7&project=medobs_sub
+    Notes: Link to interactive map
+
+41. MER-VEILLE : Observatoire des espèces et des paysages marins
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep7&project=mer-veille_34
+    Notes: Link to interactive map
+
+42. NADOR : Observatoire de la Lagune de Marchica (MAROC)
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep7&project=nador
+    Notes: Link to interactive map
+
+43. OBLADES : Observatoire sur la Baie de la Ciotat des espèces sous-marines
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep7&project=oblades
+    Notes: Link to interactive map
+
+44. OBSLAG : OBServatoire des LAGunes méditerranéennes
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep7&project=obslag
+    Notes: Link to interactive map
+
+45. OSE-MED : Observatoire socio-économique des usages du littoral et de la mer
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=rep7&project=ose-med
+    Notes: Link to interactive map
+
+46. Portail Halieutique Méditerranéen - Réglementation de la pêche 2
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=services&project=pamm2
+    Notes: Link to interactive map
+
+47. STERE 2024
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=stere&project=STERE_2024
+    Notes: Link to interactive map
+
+48. SULUBAAI
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=sulubaai&project=sulubaai
+    Notes: Link to interactive map
+
+49. eREF : Etat de référence de la biodiversité en vertébrés dans les masses d'eau côtières méditerranéennes
+    Map URL: https://plateforme.medtrix.fr/index.php/view/map?repository=team&project=EREF
+    Notes: Link to interactive map
+
+INSTRUCTIONS:
+=============
+1. All map URLs have been updated with the actual URLs from medtrix-data.txt
+2. URLs have been converted to full URLs with the plateforme.medtrix.fr domain
+3. The format is consistent with the Medtrix platform URL structure
+4. All 49 projects now have their actual interactive map links
+5. I'll now apply all these map links to the "Voir Carte" buttons in the HTML
+
+NOTES:
+- These are the "Voir Carte" overlay buttons on each map card
+- They link to the actual interactive maps on the Medtrix platform
+- All URLs are now complete and functional
+- This list is sorted exactly according to the order in medtrix-data.txt 

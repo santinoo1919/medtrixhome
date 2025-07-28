@@ -1,0 +1,167 @@
+/* ===================================
+   CENTRALIZED ANIMATIONS & TRANSITIONS
+   =================================== */
+
+/* ===================================
+   TRANSITION VARIABLES (Simplified)
+   =================================== */
+
+:root {
+  /* Base transitions - only what's actually used */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-hover: 0.2s ease-in-out;
+  --transition-transform: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-opacity: 0.2s ease;
+
+  /* Animation durations */
+  --animation-fast: 0.3s;
+  --animation-normal: 0.6s;
+}
+
+/* ===================================
+   KEYFRAME ANIMATIONS
+   =================================== */
+
+/* Slide In Up - For map cards */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In - For notifications */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Out - For notifications */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Modal Slide In - For main modal */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Fade In - General purpose */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale In - For interactive elements */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse - For loading states */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ===================================
+   ANIMATION UTILITY CLASSES
+   =================================== */
+
+/* Animation classes for easy application */
+.animate-slide-in-up {
+  animation: slideInUp var(--animation-normal) ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn var(--animation-fast) ease-out;
+}
+
+.animate-slide-out {
+  animation: slideOut var(--animation-fast) ease-out;
+}
+
+.animate-modal-slide-in {
+  animation: modalSlideIn var(--animation-fast) ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--animation-fast) ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--animation-fast) ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ===================================
+   STAGGERED ANIMATIONS
+   =================================== */
+
+/* Staggered animation delays for map cards */
+.map-card:nth-child(6n + 1) {
+  animation-delay: 0.1s;
+}
+
+.map-card:nth-child(6n + 2) {
+  animation-delay: 0.2s;
+}
+
+.map-card:nth-child(6n + 3) {
+  animation-delay: 0.3s;
+}
+
+.map-card:nth-child(6n + 4) {
+  animation-delay: 0.4s;
+}
+
+.map-card:nth-child(6n + 5) {
+  animation-delay: 0.5s;
+}
+
+.map-card:nth-child(6n + 6) {
+  animation-delay: 0.6s;
+}

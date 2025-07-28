@@ -9,8 +9,8 @@
   border-radius: var(--radius-xs);
   box-shadow: var(--shadow-light);
   overflow: hidden;
-  transition: var(--transition);
-  animation: slideInUp 0.6s ease-out forwards;
+  transition: var(--transition-normal);
+  animation: slideInUp var(--animation-normal) ease-out forwards;
   opacity: 0;
   transform: translateY(30px);
   position: relative; /* Ensure the card is the positioning context */
@@ -40,16 +40,7 @@
   animation-delay: 0.6s;
 }
 
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* Keyframes moved to animations.css */
 
 .map-card:hover {
   transform: translateY(-2px);
@@ -79,7 +70,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: var(--transition);
+  transition: var(--transition-normal);
 }
 
 .map-card:hover .map-image {
@@ -98,7 +89,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: var(--transition);
+  transition: var(--transition-opacity);
 }
 
 .map-card:hover .map-overlay {
@@ -109,13 +100,14 @@
 .map-overlay .btn-primary {
   transform: translateY(40px);
   opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition-hover);
   pointer-events: none; /* Disable button clicks */
 }
 
 .map-card:hover .map-overlay .btn-primary {
   transform: translateY(0);
   opacity: 1;
+  pointer-events: auto; /* Enable interactions on hover */
 }
 
 /* Map Info */
@@ -149,14 +141,14 @@
   color: var(--gray-400);
   font-weight: var(--font-semibold);
   font-size: var(--text-sm);
-  transition: var(--transition);
+  transition: var(--transition-normal);
   text-decoration: none;
 }
 
 .map-project-link:hover {
   color: var(--primary-dark);
   text-decoration: underline;
-  transition: var(--transition);
+  transition: var(--transition-normal);
 }
 
 /* Disable "Information à venir" links */
@@ -179,7 +171,7 @@
   font-size: var(--text-xs);
   cursor: pointer;
   opacity: 0.7;
-  transition: var(--transition);
+  transition: var(--transition-normal);
   z-index: 10;
   visibility: visible; /* Override parent's hidden visibility */
 }

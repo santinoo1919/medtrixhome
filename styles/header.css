@@ -35,6 +35,23 @@
   align-items: flex-start;
 }
 
+/* Mobile: Stack content vertically */
+@media (max-width: 768px) {
+  .modal-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .modal-header-content {
+    margin-right: 0;
+  }
+
+  .modal-header-buttons {
+    justify-content: center;
+  }
+}
+
 .modal-header-content {
   flex: 1;
   margin-right: 20px;
@@ -53,6 +70,13 @@
   color: var(--text-secondary);
   line-height: 1.4;
   max-width: 500px;
+}
+
+/* Mobile: Full width description */
+@media (max-width: 768px) {
+  .modal-description {
+    max-width: 100%;
+  }
 }
 
 .modal-header-buttons {

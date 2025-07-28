@@ -52,16 +52,7 @@
   animation: modalSlideIn 0.3s ease-out;
 }
 
-@keyframes modalSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
+/* Keyframes moved to animations.css */
 
 .modal-header {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);

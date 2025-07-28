@@ -49,3 +49,10 @@
   font-size: var(--text-sm);
   border-radius: var(--border-radius-sm);
 }
+
+/* Ensure small primary buttons have the same hover effect */
+.btn-primary.btn-sm:hover,
+.btn.btn-primary.btn-sm:hover {
+  background: var(--primary-dark) !important;
+  box-shadow: var(--shadow-md) !important;
+}
